@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YtedPi13x44=",
+  "dgSpecHash": "MZqCikdopzE=",
   "success": true,
-  "projectFilePath": "/Users/work/Desktop/TelegramBankSystem/MyAspNetApp/MyAspNetApp.csproj",
+  "projectFilePath": "/Users/work/Desktop/Test/MyAspNetApp — копия/MyAspNetApp.csproj",
   "expectedPackageFiles": [
     "/Users/work/.nuget/packages/aspnetcore.healthchecks.npgsql/9.0.0/aspnetcore.healthchecks.npgsql.9.0.0.nupkg.sha512",
     "/Users/work/.nuget/packages/microsoft.bcl.asyncinterfaces/9.0.1/microsoft.bcl.asyncinterfaces.9.0.1.nupkg.sha512",

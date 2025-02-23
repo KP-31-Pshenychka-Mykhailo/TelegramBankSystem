@@ -56,9 +56,19 @@ if (app.Environment.IsDevelopment())
 }
 
 var userRoutes = app.MapGroup("/user");
-userRoutes.MapGet("/logIn", async (long userID, string userSNP, string userPhoneNumber, string userPassword) =>
+
+userRoutes.MapPost("/logIn", async (LoginDto dto) =>
 {
-    logger.LogInformation($"User {userID} attempting login...");
+    logger.LogInformation($"User {dto.UserId} attempting login...");
+
+    var request = new UserRequest
+    {
+        UserID = dto.UserId,
+        UserSNP = dto.UserSNP,
+        UserPhoneNumber = dto.UserPhoneNumber,
+        UserPassword = dto.UserPassword
+    };
+
 
     var userIdCheckHandler = new UserUniquenessHandler(connectionStringDataBase);
     var snpValidationHandler = new SnpValidationHandler();
@@ -72,43 +82,76 @@ userRoutes.MapGet("/logIn", async (long userID, string userSNP, string userPhone
         .SetNext(passwordValidationHandler)
         .SetNext(userRegistrationHandler);
 
-    return await userIdCheckHandler.HandleAsync((userID, userSNP, userPhoneNumber, userPassword));
+    return await userIdCheckHandler.HandleAsync(request);
 });
-userRoutes.MapGet("/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}", async (long newUserID, string oldUserID, string userPhoneNumber, string userPassword) =>
+
+userRoutes.MapPost("/signIn", async (SignInDto dto) =>
 {
-    logger.LogInformation($"User {newUserID} attempting sign in...");
+    logger.LogInformation($"User {dto.NewUserId} attempting sign in...");
+    
+    var request = new UserRequest
+    {
+        UserID = dto.NewUserId,
+        UserSNP = dto.OldUserId,
+        UserPhoneNumber = dto.UserPhoneNumber,
+        UserPassword = dto.UserPassword
+    };
+
     var oldUserIDCheckHandler = new UserExistenceHandler(connectionStringDataBase);
     var passwordOldUserIDChecker = new PasswordExistenceHandler(connectionStringDataBase);
     var newUserIDCheckHandler = new UserUniquenessHandler(connectionStringDataBase);
     var updateUserInformation = new UpdateAccountInformation(connectionStringDataBase);
 
     oldUserIDCheckHandler
-            .SetNext(passwordOldUserIDChecker)
-            .SetNext(newUserIDCheckHandler)
-            .SetNext(updateUserInformation);
+        .SetNext(passwordOldUserIDChecker)
+        .SetNext(newUserIDCheckHandler)
+        .SetNext(updateUserInformation);
 
-    return await oldUserIDCheckHandler.HandleAsync((newUserID, oldUserID, userPhoneNumber, userPassword));
+    return await oldUserIDCheckHandler.HandleAsync(request);
 });
-userRoutes.MapGet("/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}", async (long newUserID, string oldUserID, string userPhoneNumber, string userPassword) => //password
+
+userRoutes.MapPost("/accountRecovery", async (AccountRecoveryDto dto) =>
 {
-    logger.LogInformation($"User {newUserID} try recovery account {oldUserID}...");
+    logger.LogInformation($"User {dto.NewUserId} trying to recover account {dto.OldUserId}...");
+    
+    var request = new UserRequest
+    {
+        UserID = dto.NewUserId,
+        UserSNP = dto.OldUserId,
+        UserPhoneNumber = dto.UserPhoneNumber,
+        UserPassword = dto.UserPassword
+    };
+
     var newUserIdCheckHandler = new UserUniquenessHandler(connectionStringDataBase);
     var oldUserIdCheckHandler = new UserExistenceHandler(connectionStringDataBase);
     var phoneNumberValidationHandler = new PhoneNumberValidationHandler();
     var phoneNumberOldUserIDChecker = new PhoneExistenceHandler(connectionStringDataBase);
-    var twoFactorAuthenticationHandler = new TwoFactorAuthenticationCodeSend(twilioAccountSid, twilioAuthToken, twilioPhoneNumber, connectionStringDataBase);
+    var twoFactorAuthenticationHandler = new TwoFactorAuthenticationCodeSend(
+        twilioAccountSid, twilioAuthToken, twilioPhoneNumber, connectionStringDataBase
+    );
 
     newUserIdCheckHandler
-            .SetNext(oldUserIdCheckHandler)
-            .SetNext(phoneNumberValidationHandler)
-            .SetNext(phoneNumberOldUserIDChecker)
-            .SetNext(twoFactorAuthenticationHandler);
+        .SetNext(oldUserIdCheckHandler)
+        .SetNext(phoneNumberValidationHandler)
+        .SetNext(phoneNumberOldUserIDChecker)
+        .SetNext(twoFactorAuthenticationHandler);
 
-    return await newUserIdCheckHandler.HandleAsync((newUserID, oldUserID, userPhoneNumber, userPassword));
+    return await newUserIdCheckHandler.HandleAsync(request);
 });
-userRoutes.MapGet("/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}", async (long newUserID, string oldUserID, string userCode, string userPassword) => 
+
+userRoutes.MapPost("/updateInformation", async (UpdateAccountDto dto) =>
 {
-    logger.LogInformation($"User {newUserID} update information from account {oldUserID}...");
+    logger.LogInformation($"User {dto.NewUserId} updating information from account {dto.OldUserId}...");
+    
+    var request = new UserRequest
+    {
+        UserID = dto.NewUserId,
+        UserSNP = dto.OldUserId,
+        UserPhoneNumber = dto.UserCode,
+        UserPassword = dto.UserPassword
+    };
+
+    
     var userIdCheckHandler = new UserUniquenessHandler(connectionStringDataBase);
     var twoFactorAuthenticationCodeCheck = new TwoFactorAuthenticationCodeCheck(connectionStringDataBase);
     var updateInformationOfAccount = new UpdateAccountInformation(connectionStringDataBase);
@@ -116,14 +159,24 @@ userRoutes.MapGet("/updateinformation_account/{newUserID}/{oldUserID}/{userCode}
     userIdCheckHandler
         .SetNext(twoFactorAuthenticationCodeCheck)
         .SetNext(updateInformationOfAccount);
-    return await userIdCheckHandler.HandleAsync((newUserID, oldUserID, userCode, userPassword));
+
+    return await userIdCheckHandler.HandleAsync(request);
 });
 
 
-var trancsactionRoutes = app.MapGroup("/operationwithballance");
-trancsactionRoutes.MapGet("/transfer/{userID}/{amountOfMoney}/{recientID}", async (long userID, long amountOfMoney, long recientID) =>
+var transactionRoutes = app.MapGroup("/operationwithbalance");
+
+transactionRoutes.MapPost("/transfer", async (TransferDto dto) =>
 {
-    logger.LogInformation($"User {userID} attempting transfer to {recientID} with amount {amountOfMoney}...");
+    logger.LogInformation($"User {dto.UserId} attempting transfer to {dto.RecipientId} with amount {dto.AmountOfMoney}...");
+    
+    var request = new UserRequestOperation
+    {
+        UserID = dto.UserId,
+        UserAmountOfMoney = dto.AmountOfMoney,
+        UserRecipientId = dto.RecipientId
+    };
+
     var accountExistenceHandler = new AccountExistenceHandler(connectionStringDataBase);
     var balanceCheckHandler = new BalanceCheckHandler(connectionStringDataBase);
     var transferHandler = new TransferHandler(connectionStringDataBase);
@@ -132,21 +185,37 @@ trancsactionRoutes.MapGet("/transfer/{userID}/{amountOfMoney}/{recientID}", asyn
         .SetNext(balanceCheckHandler)
         .SetNext(transferHandler);
 
-    return await accountExistenceHandler.HandleAsync((userID, amountOfMoney, recientID));
+    return await accountExistenceHandler.HandleAsync(request);
 });
-trancsactionRoutes.MapGet("/replenishment/{userID}/{amountOfMoney}", async (long userID, long amountOfMoney) =>
+
+transactionRoutes.MapPost("/replenishment", async (ReplenishmentDto dto) =>
 {
-    logger.LogInformation($"User {userID} attempting replenishment with amount {amountOfMoney}...");
+    logger.LogInformation($"User {dto.UserId} attempting replenishment with amount {dto.AmountOfMoney}...");
+    
+    var request = new UserRequestOperation
+    {
+        UserID = dto.UserId,
+        UserAmountOfMoney = dto.AmountOfMoney,
+    };
+
     var accountExistenceHandler = new AccountExistenceHandler(connectionStringDataBase);
     var replenishmentHandler = new ReplenishmentHandler(connectionStringDataBase);
 
     accountExistenceHandler.SetNext(replenishmentHandler);
 
-    return await accountExistenceHandler.HandleAsync((userID, amountOfMoney, Convert.ToInt64(null)));
+    return await accountExistenceHandler.HandleAsync(request);
 });
-trancsactionRoutes.MapGet("/withdrawl/{userID}/{amountOfMoney}", async (long userID, long amountOfMoney) =>
+
+transactionRoutes.MapPost("/withdrawal", async (WithdrawalDto dto) =>
 {
-    logger.LogInformation($"User {userID} attempting withdrawal with amount {amountOfMoney}...");
+    logger.LogInformation($"User {dto.UserId} attempting withdrawal with amount {dto.AmountOfMoney}...");
+    
+    var request = new UserRequestOperation
+    {
+        UserID = dto.UserId,
+        UserAmountOfMoney = dto.AmountOfMoney,
+    };
+
     var accountExistenceHandler = new AccountExistenceHandler(connectionStringDataBase);
     var balanceCheckHandler = new BalanceCheckHandler(connectionStringDataBase);
     var withdrawalHandler = new WithdrawalHandler(connectionStringDataBase);
@@ -155,15 +224,23 @@ trancsactionRoutes.MapGet("/withdrawl/{userID}/{amountOfMoney}", async (long use
         .SetNext(balanceCheckHandler)
         .SetNext(withdrawalHandler);
 
-    return await accountExistenceHandler.HandleAsync((userID, amountOfMoney, Convert.ToInt64(null)));
+    return await accountExistenceHandler.HandleAsync(request);
 });
-trancsactionRoutes.MapGet("/showinformation/{userID}", async (long userID) =>
-{
-    logger.LogInformation($"User {userID} send reques for showing information...");
-    var showInformationHandler = new ShowInformationHandler(connectionStringDataBase);
 
-    return await showInformationHandler.HandleAsync((userID));
+transactionRoutes.MapGet("/showInformation/{userID}", async (long userID) =>
+{
+    logger.LogInformation($"User {userID} requested account information...");
+
+
+        var request = new UserRequestOperation
+    {
+        UserID = userID,
+    };
+
+    var showInformationHandler = new ShowInformationHandler(connectionStringDataBase);
+    return await showInformationHandler.HandleAsync(request);
 });
+
 
 
 app.Run();
