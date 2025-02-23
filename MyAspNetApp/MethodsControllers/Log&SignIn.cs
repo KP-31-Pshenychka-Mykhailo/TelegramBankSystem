@@ -13,9 +13,9 @@ namespace LogSignIn
         public class UserRequest
     {
         public long UserID { get; set; }
-        public string UserOldID { get; set; }
-        public string UserSNP { get; set; } // oldUserID
-        public string UserPhoneNumber { get; set; } // Code
+        public long UserOldID { get; set; }
+        public string UserSNP { get; set; }
+        public string UserPhoneNumber { get; set; } 
         public string UserPassword { get; set; }
         public string UserCode { get; set; }
     }
@@ -175,7 +175,7 @@ public class UserExistenceHandler : Handler
 
         var checkOldUserQuery = "SELECT COUNT(*) FROM users WHERE userid = @userid";
         using var checkOldUserCommand = new NpgsqlCommand(checkOldUserQuery, connection);
-        checkOldUserCommand.Parameters.AddWithValue("userid", Convert.ToInt64(request.UserSNP)); //old user id
+        checkOldUserCommand.Parameters.AddWithValue("userid", request.UserOldID);
 
         var oldUserExists = (long)await checkOldUserCommand.ExecuteScalarAsync() > 0;
             if (!oldUserExists)
@@ -204,7 +204,7 @@ public class PasswordExistenceHandler : Handler
 
         var checkPasswordQuery = "SELECT passwordhash FROM users WHERE userid = @userid";
         using var checkPasswordCommand = new NpgsqlCommand(checkPasswordQuery, connection);
-        checkPasswordCommand.Parameters.AddWithValue("userid", Convert.ToInt64(request.UserSNP)); //old user id
+        checkPasswordCommand.Parameters.AddWithValue("userid", request.UserOldID);
 
         var storedPassword = (string)await checkPasswordCommand.ExecuteScalarAsync();
             if (storedPassword != request.UserPassword)
@@ -235,7 +235,7 @@ public class PhoneExistenceHandler : Handler
 
         var checkPhoneQuery = "SELECT phonenumber FROM users WHERE userid = @userid";
         using var checkPhoneCommand = new NpgsqlCommand(checkPhoneQuery, connection);
-        checkPhoneCommand.Parameters.AddWithValue("userid", Convert.ToInt64(request.UserSNP)); //old user id
+        checkPhoneCommand.Parameters.AddWithValue("userid", request.UserOldID);
 
         var storedPhoneNumber = (string)await checkPhoneCommand.ExecuteScalarAsync();
 
@@ -286,7 +286,7 @@ public class TwoFactorAuthenticationCodeSend: Handler
 
         var insertQuery = @"INSERT INTO twofactorauthenticationcodes (userid, codes, created_at) VALUES (@userid, @codes, NOW())";
         using var insertCommand = new NpgsqlCommand(insertQuery, connection);
-        insertCommand.Parameters.AddWithValue("userid", Convert.ToInt64(request.UserSNP));// Old user id
+        insertCommand.Parameters.AddWithValue("userid", request.UserOldID);
         insertCommand.Parameters.AddWithValue("codes", randomCode);
 
         await insertCommand.ExecuteNonQueryAsync();
@@ -312,8 +312,8 @@ public class TwoFactorAuthenticationCodeCheck : Handler
 
         var checkCodeQuery = "SELECT COUNT(*) FROM twofactorauthenticationcodes WHERE userid = @userid AND codes = @code";
         using var checkCodeCommand = new NpgsqlCommand(checkCodeQuery, connection);
-        checkCodeCommand.Parameters.AddWithValue("userid", Convert.ToInt64(request.UserSNP));// Old user id
-        checkCodeCommand.Parameters.AddWithValue("code", request.UserPhoneNumber);// code twofactor 
+        checkCodeCommand.Parameters.AddWithValue("userid", request.UserOldID);
+        checkCodeCommand.Parameters.AddWithValue("code", request.UserCode);
 
         var isCodeValid = (long)await checkCodeCommand.ExecuteScalarAsync() > 0;
         if (!isCodeValid)
@@ -343,7 +343,7 @@ public class UpdateAccountInformation : Handler
         var updateQuery = @"UPDATE users SET userid = @newUserID WHERE userid = @oldUserID";
         using var updateCommand = new NpgsqlCommand(updateQuery, connection);
         updateCommand.Parameters.AddWithValue("newUserID", request.UserID);
-        updateCommand.Parameters.AddWithValue("oldUserID", Convert.ToInt64(request.UserSNP)); // Old user ID
+        updateCommand.Parameters.AddWithValue("oldUserID",request.UserOldID);
 
         var rowsAffected = await updateCommand.ExecuteNonQueryAsync();
 

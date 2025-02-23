@@ -37,7 +37,7 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-string connectionStringDataBase = builder.Configuration.GetConnectionString("DefaultConnectionDataBase");//database
+string connectionStringDataBase = builder.Configuration.GetConnectionString("DefaultConnectionDataBase");
 
 var twilioConfig = builder.Configuration.GetSection("Twilio");
 string twilioAccountSid = twilioConfig["AccountSid"];
@@ -92,8 +92,7 @@ userRoutes.MapPost("/signIn", async (SignInDto dto) =>
     var request = new UserRequest
     {
         UserID = dto.NewUserId,
-        UserSNP = dto.OldUserId,
-        UserPhoneNumber = dto.UserPhoneNumber,
+        UserOldID = dto.OldUserId,
         UserPassword = dto.UserPassword
     };
 
@@ -117,9 +116,8 @@ userRoutes.MapPost("/accountRecovery", async (AccountRecoveryDto dto) =>
     var request = new UserRequest
     {
         UserID = dto.NewUserId,
-        UserSNP = dto.OldUserId,
+        UserOldID = dto.OldUserId,
         UserPhoneNumber = dto.UserPhoneNumber,
-        UserPassword = dto.UserPassword
     };
 
     var newUserIdCheckHandler = new UserUniquenessHandler(connectionStringDataBase);
@@ -146,9 +144,8 @@ userRoutes.MapPost("/updateInformation", async (UpdateAccountDto dto) =>
     var request = new UserRequest
     {
         UserID = dto.NewUserId,
-        UserSNP = dto.OldUserId,
-        UserPhoneNumber = dto.UserCode,
-        UserPassword = dto.UserPassword
+        UserOldID = dto.OldUserId,
+        UserCode = dto.UserCode
     };
 
     
