@@ -68,3 +68,5 @@
 /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/bin/Debug/net8.0/Newtonsoft.Json.dll
 /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
 /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/bin/Debug/net8.0/Twilio.dll
+/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/bin/Debug/net8.0/System.Net.Http.Json.dll
+/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/bin/Debug/net8.0/Telegram.Bot.dll

@@ -40,7 +40,7 @@ namespace OperationWithBallance
 
         public override async Task<object> HandleAsync(object request)
         {
-            var (userID, _, recientID) = ((int, int, int))request;
+            var (userID, _, recientID) = ((long, long, long))request;
 
             using var connection = new NpgsqlConnection(_connectionString);
             await connection.OpenAsync();
@@ -80,7 +80,7 @@ namespace OperationWithBallance
 
         public override async Task<object> HandleAsync(object request)
         {
-            var (userID, amountOfMoney, _) = ((int, int, int))request;
+            var (userID, amountOfMoney, _) = ((long, long, long))request;
 
             using var connection = new NpgsqlConnection(_connectionString);
             await connection.OpenAsync();
@@ -110,7 +110,7 @@ namespace OperationWithBallance
 
         public override async Task<object> HandleAsync(object request)
         {
-            var (userID, amountOfMoney, recientID) = ((int, int, int))request;
+            var (userID, amountOfMoney, recientID) = ((long, long, long))request;
 
             using var connection = new NpgsqlConnection(_connectionString);
             var fee = FeeHelper.CalculateFee(amountOfMoney);
@@ -150,14 +150,14 @@ namespace OperationWithBallance
 
         public override async Task<object> HandleAsync(object request)
         {
-            var (userID, amountOfMoney, _) = ((int, int, int))request;
+            var (userID, amountOfMoney, _) = ((long, long, long))request;
 
             using var connection = new NpgsqlConnection(_connectionString);
             var fee = FeeHelper.CalculateFee(amountOfMoney);
 
             await connection.OpenAsync();
 
-            var replenishQuery = "UPDATE users SET balance = balance + @amount WHERE userid = @userid";
+            var replenishQuery = "UPDATE users SET balance = balance + (@amount-@fee) WHERE userid = @userid";
             using var replenishCommand = new NpgsqlCommand(replenishQuery, connection);
             replenishCommand.Parameters.AddWithValue("userid", userID);
             replenishCommand.Parameters.AddWithValue("amount", amountOfMoney);
@@ -166,7 +166,7 @@ namespace OperationWithBallance
             await replenishCommand.ExecuteNonQueryAsync();
             await FeeHelper.LogTransactionFee(connection, userID, fee, "Replenishment");
 
-            return Results.Ok($"Счет пополнен успешно.{fee}");
+            return Results.Ok($"Счет пополнен успешно.{amountOfMoney-fee}");
         }
     }
 
@@ -183,7 +183,7 @@ namespace OperationWithBallance
         {
             
 
-            var (userID, amountOfMoney, _) = ((int, int, int))request;
+            var (userID, amountOfMoney, _) = ((long, long, long))request;
             var fee = FeeHelper.CalculateFee(amountOfMoney);
 
             using var connection = new NpgsqlConnection(_connectionString);
@@ -198,7 +198,7 @@ namespace OperationWithBallance
             await withdrawCommand.ExecuteNonQueryAsync();
 
             await FeeHelper.LogTransactionFee(connection, userID, fee, "Withdrawal");
-            return Results.Ok($"Снятие средств успешно выполнено.{fee}");
+            return Results.Ok($"Снятие средств успешно выполнено.{amountOfMoney-fee}");
         }
     }
 
@@ -209,7 +209,7 @@ namespace OperationWithBallance
             return amount * 0.01m; // 1% комиссии
         }
 
-        public static async Task LogTransactionFee(NpgsqlConnection connection, int userID, decimal fee, string operationType)
+        public static async Task LogTransactionFee(NpgsqlConnection connection, long userID, decimal fee, string operationType)
         {
             var logFeeQuery = "INSERT INTO transaction_fees (userid, fee, operation_type, date) VALUES (@userid, @fee, @operationType, NOW())";
             using var logFeeCommand = new NpgsqlCommand(logFeeQuery, connection);
@@ -232,7 +232,7 @@ namespace OperationWithBallance
 
         public override async Task<object> HandleAsync(object request)
         {
-            var userID = (int)request;
+            var userID = (long)request;
 
             using var connection = new NpgsqlConnection(_connectionString);
             await connection.OpenAsync();
@@ -251,3 +251,4 @@ namespace OperationWithBallance
 
 
 }
+

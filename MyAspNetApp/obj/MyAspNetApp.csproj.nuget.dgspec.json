@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/MyAspNetApp.csproj": {}
+    "/Users/work/Desktop/TelegramBankSystem/MyAspNetApp/MyAspNetApp.csproj": {}
   },
   "projects": {
-    "/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/MyAspNetApp.csproj": {
+    "/Users/work/Desktop/TelegramBankSystem/MyAspNetApp/MyAspNetApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/MyAspNetApp.csproj",
+        "projectUniqueName": "/Users/work/Desktop/TelegramBankSystem/MyAspNetApp/MyAspNetApp.csproj",
         "projectName": "MyAspNetApp",
-        "projectPath": "/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/MyAspNetApp.csproj",
+        "projectPath": "/Users/work/Desktop/TelegramBankSystem/MyAspNetApp/MyAspNetApp.csproj",
         "packagesPath": "/Users/work/.nuget/packages/",
-        "outputPath": "/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/obj/",
+        "outputPath": "/Users/work/Desktop/TelegramBankSystem/MyAspNetApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/work/.nuget/NuGet/NuGet.Config"
@@ -66,6 +66,14 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[7.2.0, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Telegram.Bot": {
+              "target": "Package",
+              "version": "[22.3.0, )"
             },
             "Twilio": {
               "target": "Package",
