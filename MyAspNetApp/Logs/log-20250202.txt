@@ -1,0 +1,219 @@
+2025-02-02 15:08:18.338 +02:00 [INF] Application is shutting down...
+2025-02-02 15:11:34.283 +02:00 [INF] Application started successfully.
+2025-02-02 15:12:37.779 +02:00 [INF] Application started successfully.
+2025-02-02 15:12:37.820 +02:00 [INF] Transaction monitoring service started.
+2025-02-02 15:12:37.884 +02:00 [INF] Now listening on: http://localhost:5268
+2025-02-02 15:12:37.884 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-02 15:12:37.884 +02:00 [INF] Hosting environment: Development
+2025-02-02 15:12:37.884 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-02-02 15:14:53.402 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/587720411/2006 - null null
+2025-02-02 15:14:53.464 +02:00 [INF] Executing endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:14:53.466 +02:00 [INF] User 587720411 attempting replenishment with amount 2006...
+2025-02-02 15:14:53.468 +02:00 [INF] Executed endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:14:53.469 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Unable to cast object of type 'System.ValueTuple`3[System.Int64,System.Decimal,System.Int32]' to type 'System.ValueTuple`3[System.Int32,System.Int32,System.Int32]'.
+   at OperationWithBallance.AccountExistenceHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/OperationWithBallance.cs:line 43
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__7>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 148
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-02 15:14:53.481 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/587720411/2006 - 500 null text/plain; charset=utf-8 79.7688ms
+2025-02-02 15:16:16.479 +02:00 [INF] Application is shutting down...
+2025-02-02 15:16:23.036 +02:00 [INF] Application started successfully.
+2025-02-02 15:16:23.072 +02:00 [INF] Transaction monitoring service started.
+2025-02-02 15:16:23.120 +02:00 [INF] Now listening on: http://localhost:5268
+2025-02-02 15:16:23.120 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-02 15:16:23.120 +02:00 [INF] Hosting environment: Development
+2025-02-02 15:16:23.120 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-02-02 15:16:28.891 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/587720411/2006 - null null
+2025-02-02 15:16:28.947 +02:00 [INF] Executing endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:16:28.949 +02:00 [INF] User 587720411 attempting replenishment with amount 2006...
+2025-02-02 15:16:28.951 +02:00 [INF] Executed endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:16:28.952 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Unable to cast object of type 'System.ValueTuple`3[System.Int64,System.Decimal,System.Int32]' to type 'System.ValueTuple`3[System.Int32,System.Int32,System.Int32]'.
+   at OperationWithBallance.AccountExistenceHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/OperationWithBallance.cs:line 43
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__7>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 146
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-02 15:16:28.958 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/587720411/2006 - 500 null text/plain; charset=utf-8 67.5165ms
+2025-02-02 15:18:22.189 +02:00 [INF] Application is shutting down...
+2025-02-02 15:18:27.867 +02:00 [INF] Application started successfully.
+2025-02-02 15:18:27.903 +02:00 [INF] Transaction monitoring service started.
+2025-02-02 15:18:27.952 +02:00 [INF] Now listening on: http://localhost:5268
+2025-02-02 15:18:27.953 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-02 15:18:27.953 +02:00 [INF] Hosting environment: Development
+2025-02-02 15:18:27.953 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-02-02 15:18:36.098 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/587720411/2006 - null null
+2025-02-02 15:18:36.152 +02:00 [INF] Executing endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:18:36.154 +02:00 [INF] User 587720411 attempting replenishment with amount 2006...
+2025-02-02 15:18:36.157 +02:00 [INF] Executed endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:18:36.158 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Unable to cast object of type 'System.ValueTuple`3[System.Int64,System.Decimal,System.Int32]' to type 'System.ValueTuple`3[System.Int64,System.Decimal,System.Int64]'.
+   at OperationWithBallance.AccountExistenceHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/OperationWithBallance.cs:line 43
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__7>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 146
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-02 15:18:36.165 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/587720411/2006 - 500 null text/plain; charset=utf-8 67.1342ms
+2025-02-02 15:27:59.171 +02:00 [INF] Application is shutting down...
+2025-02-02 15:28:05.801 +02:00 [INF] Application started successfully.
+2025-02-02 15:28:05.835 +02:00 [INF] Transaction monitoring service started.
+2025-02-02 15:28:05.882 +02:00 [INF] Now listening on: http://localhost:5268
+2025-02-02 15:28:05.883 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-02 15:28:05.883 +02:00 [INF] Hosting environment: Development
+2025-02-02 15:28:05.883 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-02-02 15:28:13.673 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/587720411/2006 - null null
+2025-02-02 15:28:13.722 +02:00 [INF] Executing endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:28:13.724 +02:00 [INF] User 587720411 attempting replenishment with amount 2006...
+2025-02-02 15:28:13.767 +02:00 [INF] Setting HTTP status code 200.
+2025-02-02 15:28:13.767 +02:00 [INF] Writing value of type 'String' as Json.
+2025-02-02 15:28:13.773 +02:00 [INF] Executed endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:28:13.775 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/587720411/2006 - 200 null application/json; charset=utf-8 102.134ms
+2025-02-02 15:28:16.380 +02:00 [ERR] BackgroundService failed
+Telegram Bot API error 400: Bad Request: chat not found
+   at Telegram.Bot.TelegramBotClient.SendRequest[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at Telegram.Bot.TelegramBotClientExtensions.SendMessage(ITelegramBotClient botClient, ChatId chatId, String text, ParseMode parseMode, ReplyParameters replyParameters, IReplyMarkup replyMarkup, LinkPreviewOptions linkPreviewOptions, Nullable`1 messageThreadId, IEnumerable`1 entities, Boolean disableNotification, Boolean protectContent, String messageEffectId, String businessConnectionId, Boolean allowPaidBroadcast, CancellationToken cancellationToken)
+   at SendMessage.TransactionMonitorService.NotifyUser(Int64 userId, Decimal fee, String operationType) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/SendMessage.cs:line 61
+   at SendMessage.TransactionMonitorService.MonitorTransactions() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/SendMessage.cs:line 49
+   at SendMessage.TransactionMonitorService.ExecuteAsync(CancellationToken stoppingToken) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/SendMessage.cs:line 31
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2025-02-02 15:28:16.385 +02:00 [FTL] The HostOptions.BackgroundServiceExceptionBehavior is configured to StopHost. A BackgroundService has thrown an unhandled exception, and the IHost instance is stopping. To avoid this behavior, configure this to Ignore; however the BackgroundService will not be restarted.
+Telegram Bot API error 400: Bad Request: chat not found
+   at Telegram.Bot.TelegramBotClient.SendRequest[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at Telegram.Bot.TelegramBotClientExtensions.SendMessage(ITelegramBotClient botClient, ChatId chatId, String text, ParseMode parseMode, ReplyParameters replyParameters, IReplyMarkup replyMarkup, LinkPreviewOptions linkPreviewOptions, Nullable`1 messageThreadId, IEnumerable`1 entities, Boolean disableNotification, Boolean protectContent, String messageEffectId, String businessConnectionId, Boolean allowPaidBroadcast, CancellationToken cancellationToken)
+   at SendMessage.TransactionMonitorService.NotifyUser(Int64 userId, Decimal fee, String operationType) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/SendMessage.cs:line 61
+   at SendMessage.TransactionMonitorService.MonitorTransactions() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/SendMessage.cs:line 49
+   at SendMessage.TransactionMonitorService.ExecuteAsync(CancellationToken stoppingToken) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/SendMessage.cs:line 31
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2025-02-02 15:28:16.385 +02:00 [INF] Application is shutting down...
+2025-02-02 15:37:06.126 +02:00 [INF] Application started successfully.
+2025-02-02 15:37:06.172 +02:00 [INF] Transaction monitoring service started.
+2025-02-02 15:37:06.232 +02:00 [INF] Now listening on: http://localhost:5268
+2025-02-02 15:37:06.233 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-02 15:37:06.233 +02:00 [INF] Hosting environment: Development
+2025-02-02 15:37:06.233 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-02-02 15:37:10.265 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/logIn/732445437/Pshenichka Mykhailo Maksimovich/+380955040831/idiNaxui123_ - null null
+2025-02-02 15:37:10.317 +02:00 [INF] Executing endpoint 'HTTP: GET /user/logIn/{userID}/{userSNP}/{userPhoneNumber}/{userPassword}'
+2025-02-02 15:37:10.318 +02:00 [INF] User 732445437 attempting login...
+2025-02-02 15:37:10.357 +02:00 [INF] Setting HTTP status code 200.
+2025-02-02 15:37:10.358 +02:00 [INF] Writing value of type 'String' as Json.
+2025-02-02 15:37:10.364 +02:00 [INF] Executed endpoint 'HTTP: GET /user/logIn/{userID}/{userSNP}/{userPhoneNumber}/{userPassword}'
+2025-02-02 15:37:10.365 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/logIn/732445437/Pshenichka Mykhailo Maksimovich/+380955040831/idiNaxui123_ - 200 null application/json; charset=utf-8 100.6132ms
+2025-02-02 15:37:32.755 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006 - null null
+2025-02-02 15:37:32.759 +02:00 [INF] Executing endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:37:32.761 +02:00 [INF] User 732445437 attempting replenishment with amount 2006...
+2025-02-02 15:37:32.772 +02:00 [INF] Setting HTTP status code 200.
+2025-02-02 15:37:32.772 +02:00 [INF] Writing value of type 'String' as Json.
+2025-02-02 15:37:32.772 +02:00 [INF] Executed endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:37:32.772 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006 - 200 null application/json; charset=utf-8 17.9199ms
+2025-02-02 15:38:18.666 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006.0 - null null
+2025-02-02 15:38:18.670 +02:00 [INF] Executing endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:38:18.670 +02:00 [INF] User 732445437 attempting replenishment with amount 2006.0...
+2025-02-02 15:38:18.673 +02:00 [INF] Setting HTTP status code 200.
+2025-02-02 15:38:18.673 +02:00 [INF] Writing value of type 'String' as Json.
+2025-02-02 15:38:18.674 +02:00 [INF] Executed endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:38:18.674 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006.0 - 200 null application/json; charset=utf-8 8.321ms
+2025-02-02 15:41:06.827 +02:00 [INF] Application is shutting down...
+2025-02-02 15:41:13.875 +02:00 [INF] Application started successfully.
+2025-02-02 15:41:13.913 +02:00 [INF] Transaction monitoring service started.
+2025-02-02 15:41:13.965 +02:00 [INF] Now listening on: http://localhost:5268
+2025-02-02 15:41:13.966 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-02 15:41:13.966 +02:00 [INF] Hosting environment: Development
+2025-02-02 15:41:13.966 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-02-02 15:41:16.504 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006.0 - null null
+2025-02-02 15:41:16.556 +02:00 [INF] Executing endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:41:16.557 +02:00 [INF] User 732445437 attempting replenishment with amount 2006.0...
+2025-02-02 15:41:16.559 +02:00 [INF] Executed endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:41:16.560 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Unable to cast object of type 'System.ValueTuple`3[System.Int64,System.Decimal,System.Int64]' to type 'System.ValueTuple`3[System.Int64,System.Int64,System.Int64]'.
+   at OperationWithBallance.AccountExistenceHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/OperationWithBallance.cs:line 43
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__7>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 146
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-02 15:41:16.567 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006.0 - 500 null text/plain; charset=utf-8 63.258ms
+2025-02-02 15:42:33.450 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006 - null null
+2025-02-02 15:42:33.455 +02:00 [INF] Executing endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:42:33.455 +02:00 [INF] User 732445437 attempting replenishment with amount 2006...
+2025-02-02 15:42:33.456 +02:00 [INF] Executed endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:42:33.456 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Unable to cast object of type 'System.ValueTuple`3[System.Int64,System.Decimal,System.Int64]' to type 'System.ValueTuple`3[System.Int64,System.Int64,System.Int64]'.
+   at OperationWithBallance.AccountExistenceHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/OperationWithBallance.cs:line 43
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__7>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 146
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-02 15:42:33.458 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006 - 500 null text/plain; charset=utf-8 9.0452ms
+2025-02-02 15:44:53.609 +02:00 [INF] Application is shutting down...
+2025-02-02 15:44:59.137 +02:00 [INF] Application started successfully.
+2025-02-02 15:44:59.173 +02:00 [INF] Transaction monitoring service started.
+2025-02-02 15:44:59.221 +02:00 [INF] Now listening on: http://localhost:5268
+2025-02-02 15:44:59.222 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-02 15:44:59.222 +02:00 [INF] Hosting environment: Development
+2025-02-02 15:44:59.222 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-02-02 15:45:05.871 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006 - null null
+2025-02-02 15:45:05.924 +02:00 [INF] Executing endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:45:05.925 +02:00 [INF] User 732445437 attempting replenishment with amount 2006...
+2025-02-02 15:45:05.967 +02:00 [INF] Setting HTTP status code 200.
+2025-02-02 15:45:05.967 +02:00 [INF] Writing value of type 'String' as Json.
+2025-02-02 15:45:05.973 +02:00 [INF] Executed endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:45:05.974 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006 - 200 null application/json; charset=utf-8 104.0015ms
+2025-02-02 15:52:14.380 +02:00 [INF] Application is shutting down...
+2025-02-02 15:53:54.784 +02:00 [INF] Application started successfully.
+2025-02-02 15:53:54.826 +02:00 [INF] Transaction monitoring service started.
+2025-02-02 15:53:54.886 +02:00 [INF] Now listening on: http://localhost:5268
+2025-02-02 15:53:54.886 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-02 15:53:54.886 +02:00 [INF] Hosting environment: Development
+2025-02-02 15:53:54.886 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-02-02 15:54:04.968 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006 - null null
+2025-02-02 15:54:05.020 +02:00 [INF] Executing endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:54:05.021 +02:00 [INF] User 732445437 attempting replenishment with amount 2006...
+2025-02-02 15:54:05.060 +02:00 [INF] Setting HTTP status code 200.
+2025-02-02 15:54:05.060 +02:00 [INF] Writing value of type 'String' as Json.
+2025-02-02 15:54:05.066 +02:00 [INF] Executed endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:54:05.068 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006 - 200 null application/json; charset=utf-8 100.4338ms
+2025-02-02 15:55:30.201 +02:00 [INF] Application is shutting down...
+2025-02-02 15:55:35.760 +02:00 [INF] Application started successfully.
+2025-02-02 15:55:35.795 +02:00 [INF] Transaction monitoring service started.
+2025-02-02 15:55:35.844 +02:00 [INF] Now listening on: http://localhost:5268
+2025-02-02 15:55:35.845 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-02 15:55:35.845 +02:00 [INF] Hosting environment: Development
+2025-02-02 15:55:35.845 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-02-02 15:55:50.226 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006 - null null
+2025-02-02 15:55:50.274 +02:00 [INF] Executing endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:55:50.275 +02:00 [INF] User 732445437 attempting replenishment with amount 2006...
+2025-02-02 15:55:50.314 +02:00 [INF] Setting HTTP status code 200.
+2025-02-02 15:55:50.314 +02:00 [INF] Writing value of type 'String' as Json.
+2025-02-02 15:55:50.320 +02:00 [INF] Executed endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:55:50.322 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006 - 200 null application/json; charset=utf-8 96.0885ms
+2025-02-02 15:57:15.781 +02:00 [INF] Application is shutting down...
+2025-02-02 15:57:24.579 +02:00 [INF] Application started successfully.
+2025-02-02 15:57:24.618 +02:00 [INF] Transaction monitoring service started.
+2025-02-02 15:57:24.667 +02:00 [INF] Now listening on: http://localhost:5268
+2025-02-02 15:57:24.668 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-02 15:57:24.668 +02:00 [INF] Hosting environment: Development
+2025-02-02 15:57:24.668 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-02-02 15:57:28.077 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006 - null null
+2025-02-02 15:57:28.140 +02:00 [INF] Executing endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:57:28.141 +02:00 [INF] User 732445437 attempting replenishment with amount 2006...
+2025-02-02 15:57:28.178 +02:00 [INF] Setting HTTP status code 200.
+2025-02-02 15:57:28.178 +02:00 [INF] Writing value of type 'String' as Json.
+2025-02-02 15:57:28.184 +02:00 [INF] Executed endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-02 15:57:28.185 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/2006 - 200 null application/json; charset=utf-8 109.0095ms
+2025-02-02 20:50:19.104 +02:00 [INF] Application is shutting down...

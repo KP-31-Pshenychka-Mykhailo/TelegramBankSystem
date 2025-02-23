@@ -1,0 +1,34 @@
+2025-02-14 15:28:34.038 +02:00 [INF] Application started successfully.
+2025-02-14 15:28:34.080 +02:00 [INF] Transaction monitoring service started.
+2025-02-14 15:28:34.152 +02:00 [INF] Now listening on: http://localhost:5268
+2025-02-14 15:28:34.153 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-14 15:28:34.153 +02:00 [INF] Hosting environment: Development
+2025-02-14 15:28:34.153 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-02-14 15:28:39.616 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5268/user/logIn - application/json 123
+2025-02-14 15:28:39.689 +02:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-02-14 15:28:39.689 +02:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-02-14 15:28:39.691 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5268/user/logIn - 405 0 null 75.6029ms
+2025-02-14 15:30:37.804 +02:00 [INF] Application is shutting down...
+2025-02-14 15:31:01.935 +02:00 [INF] Application started successfully.
+2025-02-14 15:31:01.976 +02:00 [INF] Transaction monitoring service started.
+2025-02-14 15:31:02.037 +02:00 [INF] Now listening on: http://localhost:5268
+2025-02-14 15:31:02.038 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-14 15:31:02.038 +02:00 [INF] Hosting environment: Development
+2025-02-14 15:31:02.038 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-02-14 15:31:07.640 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5268/user/logIn - application/json 123
+2025-02-14 15:31:07.713 +02:00 [INF] Executing endpoint 'HTTP: POST /user/logIn'
+2025-02-14 15:31:07.722 +02:00 [INF] User 734343334 attempting login...
+2025-02-14 15:31:07.726 +02:00 [INF] Executed endpoint 'HTTP: POST /user/logIn'
+2025-02-14 15:31:07.727 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Unable to cast object of type 'Dto.LogInDto' to type 'System.ValueTuple`4[System.Int64,System.String,System.String,System.String]'.
+   at LogSignIn.UserUniquenessHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 45
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__2>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 75
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-14 15:31:07.734 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5268/user/logIn - 500 null text/plain; charset=utf-8 95.5363ms

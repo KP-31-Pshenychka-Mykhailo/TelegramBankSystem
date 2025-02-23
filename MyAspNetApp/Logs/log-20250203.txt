@@ -1,0 +1,13 @@
+2025-02-03 19:42:30.895 +02:00 [INF] Application started successfully.
+2025-02-03 19:42:30.938 +02:00 [INF] Transaction monitoring service started.
+2025-02-03 19:42:31.011 +02:00 [INF] Now listening on: http://localhost:5268
+2025-02-03 19:42:31.012 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-03 19:42:31.012 +02:00 [INF] Hosting environment: Development
+2025-02-03 19:42:31.012 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-02-03 19:43:15.847 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/345 - null null
+2025-02-03 19:43:15.903 +02:00 [INF] Executing endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-03 19:43:15.903 +02:00 [INF] User 732445437 attempting replenishment with amount 345...
+2025-02-03 19:43:15.965 +02:00 [INF] Setting HTTP status code 200.
+2025-02-03 19:43:15.967 +02:00 [INF] Writing value of type 'String' as Json.
+2025-02-03 19:43:15.986 +02:00 [INF] Executed endpoint 'HTTP: GET /operationwithballance/replenishment/{userID}/{amountOfMoney}'
+2025-02-03 19:43:15.987 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/operationwithballance/replenishment/732445437/345 - 200 null application/json; charset=utf-8 141.243ms

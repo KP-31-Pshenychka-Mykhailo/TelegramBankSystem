@@ -3787,11 +3787,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/work/Desktop/Test/MyAspNetApp — копия/MyAspNetApp.csproj",
+      "projectUniqueName": "/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/MyAspNetApp.csproj",
       "projectName": "MyAspNetApp",
-      "projectPath": "/Users/work/Desktop/Test/MyAspNetApp — копия/MyAspNetApp.csproj",
+      "projectPath": "/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/MyAspNetApp.csproj",
       "packagesPath": "/Users/work/.nuget/packages/",
-      "outputPath": "/Users/work/Desktop/Test/MyAspNetApp — копия/obj/",
+      "outputPath": "/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/work/.nuget/NuGet/NuGet.Config"

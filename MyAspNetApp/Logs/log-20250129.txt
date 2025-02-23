@@ -1,0 +1,739 @@
+2025-01-29 14:13:58.421 +02:00 [INF] Application is shutting down...
+2025-01-29 14:20:37.915 +02:00 [INF] Application started successfully.
+2025-01-29 14:20:37.981 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 14:20:37.982 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 14:20:37.982 +02:00 [INF] Hosting environment: Development
+2025-01-29 14:20:37.982 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 14:20:40.153 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/logIn/54233445/Zybenko Mykhail Petrovich/+380955040831/Sosuhui20cm_ - null null
+2025-01-29 14:20:40.201 +02:00 [INF] Executing endpoint 'HTTP: GET /user/logIn/{userID}/{userSNP}/{userPhoneNumber}/{userPassword}'
+2025-01-29 14:20:40.202 +02:00 [INF] User 54233445 attempting login...
+2025-01-29 14:20:40.334 +02:00 [INF] Setting HTTP status code 200.
+2025-01-29 14:20:40.335 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 14:20:40.341 +02:00 [INF] Executed endpoint 'HTTP: GET /user/logIn/{userID}/{userSNP}/{userPhoneNumber}/{userPassword}'
+2025-01-29 14:20:40.342 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/logIn/54233445/Zybenko Mykhail Petrovich/+380955040831/Sosuhui20cm_ - 200 null application/json; charset=utf-8 190.4475ms
+2025-01-29 14:22:22.947 +02:00 [INF] Application is shutting down...
+2025-01-29 14:22:28.395 +02:00 [INF] Application started successfully.
+2025-01-29 14:22:28.453 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 14:22:28.453 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 14:22:28.454 +02:00 [INF] Hosting environment: Development
+2025-01-29 14:22:28.454 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 14:22:37.143 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/logIn/54333445/Zybenko Mykhail Petrovich/+380955040831/Sosuhui20cm_ - null null
+2025-01-29 14:22:37.200 +02:00 [INF] Executing endpoint 'HTTP: GET /user/logIn/{userID}/{userSNP}/{userPhoneNumber}/{userPassword}'
+2025-01-29 14:22:37.200 +02:00 [INF] User 54333445 attempting login...
+2025-01-29 14:22:37.321 +02:00 [INF] Setting HTTP status code 200.
+2025-01-29 14:22:37.321 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 14:22:37.328 +02:00 [INF] Executed endpoint 'HTTP: GET /user/logIn/{userID}/{userSNP}/{userPhoneNumber}/{userPassword}'
+2025-01-29 14:22:37.329 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/logIn/54333445/Zybenko Mykhail Petrovich/+380955040831/Sosuhui20cm_ - 200 null application/json; charset=utf-8 186.19ms
+2025-01-29 14:24:59.516 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/logIn/54433445/Zybenko Mykhail Petrovich/0955040831/Sosuhui20cm_ - null null
+2025-01-29 14:24:59.523 +02:00 [INF] Executing endpoint 'HTTP: GET /user/logIn/{userID}/{userSNP}/{userPhoneNumber}/{userPassword}'
+2025-01-29 14:24:59.523 +02:00 [INF] User 54433445 attempting login...
+2025-01-29 14:24:59.528 +02:00 [INF] Setting HTTP status code 200.
+2025-01-29 14:24:59.529 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 14:24:59.529 +02:00 [INF] Executed endpoint 'HTTP: GET /user/logIn/{userID}/{userSNP}/{userPhoneNumber}/{userPassword}'
+2025-01-29 14:24:59.529 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/logIn/54433445/Zybenko Mykhail Petrovich/0955040831/Sosuhui20cm_ - 200 null application/json; charset=utf-8 14.019ms
+2025-01-29 14:36:41.324 +02:00 [INF] Application is shutting down...
+2025-01-29 15:11:38.778 +02:00 [INF] Application started successfully.
+2025-01-29 15:11:38.842 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 15:11:38.843 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 15:11:38.843 +02:00 [INF] Hosting environment: Development
+2025-01-29 15:11:38.843 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 15:11:46.466 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/logIn/732445437/Pshenichka Mykhailo Maksimovich/+380955040831/idiNaxui111_ - null null
+2025-01-29 15:11:46.515 +02:00 [INF] Executing endpoint 'HTTP: GET /user/logIn/{userID}/{userSNP}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:11:46.516 +02:00 [INF] User 732445437 attempting login...
+2025-01-29 15:11:46.637 +02:00 [INF] Setting HTTP status code 200.
+2025-01-29 15:11:46.638 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 15:11:46.644 +02:00 [INF] Executed endpoint 'HTTP: GET /user/logIn/{userID}/{userSNP}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:11:46.645 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/logIn/732445437/Pshenichka Mykhailo Maksimovich/+380955040831/idiNaxui111_ - 200 null application/json; charset=utf-8 179.8783ms
+2025-01-29 15:15:05.633 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/signIn/5877204126/732445437/+380955040831/idiNaxui111_ - null null
+2025-01-29 15:15:05.637 +02:00 [INF] Executing endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:15:05.637 +02:00 [INF] Executed endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:15:05.639 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "int newUserID" from "5877204126".
+   at lambda_method3(Closure, Object, HttpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-29 15:15:05.648 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/signIn/5877204126/732445437/+380955040831/idiNaxui111_ - 400 null text/plain; charset=utf-8 16.3881ms
+2025-01-29 15:16:15.861 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/signIn/5877204126/732445437/0955040831/idiNaxui111_ - null null
+2025-01-29 15:16:15.863 +02:00 [INF] Executing endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:16:15.863 +02:00 [INF] Executed endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:16:15.863 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "int newUserID" from "5877204126".
+   at lambda_method3(Closure, Object, HttpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-29 15:16:15.865 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/signIn/5877204126/732445437/0955040831/idiNaxui111_ - 400 null text/plain; charset=utf-8 3.5896ms
+2025-01-29 15:17:00.575 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/signIn/587720412/732445437/0955040831/idiNaxui111_ - null null
+2025-01-29 15:17:00.576 +02:00 [INF] Executing endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:17:00.577 +02:00 [INF] User 587720412 attempting sign in...
+2025-01-29 15:17:00.607 +02:00 [INF] Setting HTTP status code 200.
+2025-01-29 15:17:00.607 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 15:17:00.607 +02:00 [INF] Executed endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:17:00.608 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/signIn/587720412/732445437/0955040831/idiNaxui111_ - 200 null application/json; charset=utf-8 32.109ms
+2025-01-29 15:18:01.752 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/signIn/587720416/732445437/+380955040831/idiNaxui111_ - null null
+2025-01-29 15:18:01.756 +02:00 [INF] Executing endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:18:01.757 +02:00 [INF] User 587720416 attempting sign in...
+2025-01-29 15:18:01.759 +02:00 [INF] Setting HTTP status code 400.
+2025-01-29 15:18:01.759 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 15:18:01.759 +02:00 [INF] Executed endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:18:01.759 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/signIn/587720416/732445437/+380955040831/idiNaxui111_ - 400 null application/json; charset=utf-8 7.1678ms
+2025-01-29 15:18:16.973 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/signIn/587720416/587720412/+380955040831/idiNaxui111_ - null null
+2025-01-29 15:18:16.973 +02:00 [INF] Executing endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:18:16.973 +02:00 [INF] User 587720416 attempting sign in...
+2025-01-29 15:18:16.977 +02:00 [INF] Setting HTTP status code 200.
+2025-01-29 15:18:16.977 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 15:18:16.977 +02:00 [INF] Executed endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:18:16.977 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/signIn/587720416/587720412/+380955040831/idiNaxui111_ - 200 null application/json; charset=utf-8 4.4523ms
+2025-01-29 15:22:57.986 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/signIn/5877204112/587720416/+380955040831/idiNaxui111_ - null null
+2025-01-29 15:22:57.991 +02:00 [INF] Executing endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:22:57.992 +02:00 [INF] Executed endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:22:57.993 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "int newUserID" from "5877204112".
+   at lambda_method3(Closure, Object, HttpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-29 15:22:57.994 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/signIn/5877204112/587720416/+380955040831/idiNaxui111_ - 400 null text/plain; charset=utf-8 8.265ms
+2025-01-29 15:27:43.023 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/signIn/587720411/587720416/+380955040831/  - null null
+2025-01-29 15:27:43.025 +02:00 [INF] Executing endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:27:43.026 +02:00 [INF] User 587720411 attempting sign in...
+2025-01-29 15:27:43.029 +02:00 [INF] Setting HTTP status code 400.
+2025-01-29 15:27:43.029 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 15:27:43.031 +02:00 [INF] Executed endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:27:43.031 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/signIn/587720411/587720416/+380955040831/  - 400 null application/json; charset=utf-8 7.5839ms
+2025-01-29 15:27:51.679 +02:00 [INF] Application is shutting down...
+2025-01-29 15:28:02.137 +02:00 [INF] Application started successfully.
+2025-01-29 15:28:02.204 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 15:28:02.205 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 15:28:02.205 +02:00 [INF] Hosting environment: Development
+2025-01-29 15:28:02.205 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 15:28:06.195 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/signIn/587720411/587720416/+380955040831/  - null null
+2025-01-29 15:28:06.244 +02:00 [INF] Executing endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:28:06.245 +02:00 [INF] User 587720411 attempting sign in...
+2025-01-29 15:28:06.368 +02:00 [INF] Setting HTTP status code 400.
+2025-01-29 15:28:06.368 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 15:28:06.375 +02:00 [INF] Executed endpoint 'HTTP: GET /user/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:28:06.376 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/signIn/587720411/587720416/+380955040831/  - 400 null application/json; charset=utf-8 181.4528ms
+2025-01-29 15:28:41.122 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - null null
+2025-01-29 15:28:41.125 +02:00 [INF] Executing endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:28:41.126 +02:00 [INF] User 587720411 try recovery account 587720416...
+2025-01-29 15:28:41.139 +02:00 [INF] Setting HTTP status code 400.
+2025-01-29 15:28:41.139 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 15:28:41.140 +02:00 [INF] Executed endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:28:41.140 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - 400 null application/json; charset=utf-8 18.034ms
+2025-01-29 15:28:49.848 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/0955040831/  - null null
+2025-01-29 15:28:49.850 +02:00 [INF] Executing endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:28:49.850 +02:00 [INF] User 587720411 try recovery account 587720416...
+2025-01-29 15:28:50.665 +02:00 [INF] Setting HTTP status code 200.
+2025-01-29 15:28:50.666 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 15:28:50.666 +02:00 [INF] Executed endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:28:50.666 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/0955040831/  - 200 null application/json; charset=utf-8 817.3277ms
+2025-01-29 15:32:06.847 +02:00 [INF] Application is shutting down...
+2025-01-29 15:32:32.590 +02:00 [INF] Application started successfully.
+2025-01-29 15:32:32.653 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 15:32:32.653 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 15:32:32.654 +02:00 [INF] Hosting environment: Development
+2025-01-29 15:32:32.654 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 15:32:39.452 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - null null
+2025-01-29 15:32:39.499 +02:00 [INF] Executing endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:32:39.499 +02:00 [INF] User 587720411 try recovery account 587720416...
+2025-01-29 15:32:40.381 +02:00 [INF] Executed endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:32:40.382 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Twilio.Exceptions.ApiException: Invalid 'To' Phone Number: +38+38095504XXXX
+   at Twilio.Clients.TwilioRestClient.ProcessResponse(Response response)
+   at Twilio.Clients.TwilioRestClient.RequestAsync(Request request)
+   at Twilio.Rest.Api.V2010.Account.MessageResource.CreateAsync(CreateMessageOptions options, ITwilioRestClient client)
+   at Twilio.Rest.Api.V2010.Account.MessageResource.CreateAsync(PhoneNumber to, String pathAccountSid, PhoneNumber from, String messagingServiceSid, String body, List`1 mediaUrl, String contentSid, Uri statusCallback, String applicationSid, Nullable`1 maxPrice, Nullable`1 provideFeedback, Nullable`1 attempt, Nullable`1 validityPeriod, Nullable`1 forceDelivery, ContentRetentionEnum contentRetention, AddressRetentionEnum addressRetention, Nullable`1 smartEncoded, List`1 persistentAction, Nullable`1 shortenUrls, ScheduleTypeEnum scheduleType, Nullable`1 sendAt, Nullable`1 sendAsMms, String contentVariables, RiskCheckEnum riskCheck, ITwilioRestClient client)
+   at LogSignIn.TwoFactorAuthentication.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 270
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.PhoneExistenceHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 242
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.PhoneNumberValidationHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 96
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserExistenceHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 176
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserUniquenessHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 60
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__3>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 100
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-29 15:32:40.391 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - 500 null text/plain; charset=utf-8 939.9812ms
+2025-01-29 15:35:39.071 +02:00 [INF] Application is shutting down...
+2025-01-29 15:35:45.004 +02:00 [INF] Application started successfully.
+2025-01-29 15:35:45.066 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 15:35:45.067 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 15:35:45.067 +02:00 [INF] Hosting environment: Development
+2025-01-29 15:35:45.067 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 15:35:47.544 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - null null
+2025-01-29 15:35:47.590 +02:00 [INF] Executing endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:35:47.590 +02:00 [INF] User 587720411 try recovery account 587720416...
+2025-01-29 15:35:48.403 +02:00 [INF] Setting HTTP status code 200.
+2025-01-29 15:35:48.404 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 15:35:48.409 +02:00 [INF] Executed endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:35:48.410 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - 200 null application/json; charset=utf-8 867.135ms
+2025-01-29 15:56:01.366 +02:00 [INF] Application is shutting down...
+2025-01-29 15:56:08.799 +02:00 [INF] Application started successfully.
+2025-01-29 15:56:08.859 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 15:56:08.860 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 15:56:08.860 +02:00 [INF] Hosting environment: Development
+2025-01-29 15:56:08.860 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 15:56:12.430 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - null null
+2025-01-29 15:56:12.482 +02:00 [INF] Executing endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:56:12.482 +02:00 [INF] User 587720411 try recovery account 587720416...
+2025-01-29 15:56:13.372 +02:00 [INF] Executed endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 15:56:13.373 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42703: column "newuserid" does not exist
+
+POSITION: 79
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at LogSignIn.TwoFactorAuthenticationCodeSend.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 287
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.PhoneExistenceHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 242
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.PhoneNumberValidationHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 96
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserExistenceHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 176
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserUniquenessHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 60
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__3>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 100
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "newuserid" does not exist
+    Hint: Perhaps you meant to reference the column "twofactorauthenticationcodes.userid".
+    Position: 79
+    File: parse_relation.c
+    Line: 3738
+    Routine: errorMissingColumn
+2025-01-29 15:56:13.383 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - 500 null text/plain; charset=utf-8 953.5053ms
+2025-01-29 16:01:29.042 +02:00 [INF] Application is shutting down...
+2025-01-29 16:01:40.461 +02:00 [INF] Application started successfully.
+2025-01-29 16:01:40.529 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 16:01:40.529 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 16:01:40.530 +02:00 [INF] Hosting environment: Development
+2025-01-29 16:01:40.530 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 16:01:42.559 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - null null
+2025-01-29 16:01:42.610 +02:00 [INF] Executing endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 16:01:42.610 +02:00 [INF] User 587720411 try recovery account 587720416...
+2025-01-29 16:01:43.718 +02:00 [INF] Executed endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 16:01:43.719 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 23503: insert or update on table "twofactorauthenticationcodes" violates foreign key constraint "twofactorauthenticationcodes_userid_fkey"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at LogSignIn.TwoFactorAuthenticationCodeSend.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 287
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.PhoneExistenceHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 242
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.PhoneNumberValidationHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 96
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserExistenceHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 176
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserUniquenessHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 60
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__3>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 100
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "twofactorauthenticationcodes" violates foreign key constraint "twofactorauthenticationcodes_userid_fkey"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: twofactorauthenticationcodes
+    ConstraintName: twofactorauthenticationcodes_userid_fkey
+    File: ri_triggers.c
+    Line: 2619
+    Routine: ri_ReportViolation
+2025-01-29 16:01:43.731 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - 500 null text/plain; charset=utf-8 1172.9425ms
+2025-01-29 16:04:38.245 +02:00 [INF] Application is shutting down...
+2025-01-29 16:04:49.822 +02:00 [INF] Application started successfully.
+2025-01-29 16:04:49.886 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 16:04:49.887 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 16:04:49.887 +02:00 [INF] Hosting environment: Development
+2025-01-29 16:04:49.887 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 16:04:51.238 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - null null
+2025-01-29 16:04:51.288 +02:00 [INF] Executing endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 16:04:51.289 +02:00 [INF] User 587720411 try recovery account 587720416...
+2025-01-29 16:04:52.128 +02:00 [INF] Executed endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 16:04:52.130 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42804: column "userid" is of type integer but expression is of type text
+
+POSITION: 78
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at LogSignIn.TwoFactorAuthenticationCodeSend.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 287
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.PhoneExistenceHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 242
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.PhoneNumberValidationHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 96
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserExistenceHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 176
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserUniquenessHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 60
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__3>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 100
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42804
+    MessageText: column "userid" is of type integer but expression is of type text
+    Hint: You will need to rewrite or cast the expression.
+    Position: 78
+    File: parse_target.c
+    Line: 594
+    Routine: transformAssignedExpr
+2025-01-29 16:04:52.139 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - 500 null text/plain; charset=utf-8 901.4137ms
+2025-01-29 16:06:00.379 +02:00 [INF] Application is shutting down...
+2025-01-29 16:06:08.120 +02:00 [INF] Application started successfully.
+2025-01-29 16:06:08.179 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 16:06:08.179 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 16:06:08.180 +02:00 [INF] Hosting environment: Development
+2025-01-29 16:06:08.180 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 16:06:11.461 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - null null
+2025-01-29 16:06:11.512 +02:00 [INF] Executing endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 16:06:11.513 +02:00 [INF] User 587720411 try recovery account 587720416...
+2025-01-29 16:06:12.290 +02:00 [INF] Setting HTTP status code 200.
+2025-01-29 16:06:12.291 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 16:06:12.297 +02:00 [INF] Executed endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 16:06:12.299 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - 200 null application/json; charset=utf-8 838.1111ms
+2025-01-29 16:14:31.275 +02:00 [INF] Application is shutting down...
+2025-01-29 16:14:38.422 +02:00 [INF] Application started successfully.
+2025-01-29 16:14:38.479 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 16:14:38.480 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 16:14:38.480 +02:00 [INF] Hosting environment: Development
+2025-01-29 16:14:38.480 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 16:14:39.938 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - null null
+2025-01-29 16:14:39.987 +02:00 [INF] Executing endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 16:14:39.987 +02:00 [INF] User 587720411 try recovery account 587720416...
+2025-01-29 16:14:40.899 +02:00 [INF] Setting HTTP status code 200.
+2025-01-29 16:14:40.900 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 16:14:40.905 +02:00 [INF] Executed endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 16:14:40.907 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - 200 null application/json; charset=utf-8 968.92ms
+2025-01-29 16:26:07.618 +02:00 [INF] Application is shutting down...
+2025-01-29 16:26:14.574 +02:00 [INF] Application started successfully.
+2025-01-29 16:26:14.633 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 16:26:14.634 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 16:26:14.634 +02:00 [INF] Hosting environment: Development
+2025-01-29 16:26:14.634 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 16:26:16.609 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - null null
+2025-01-29 16:26:16.657 +02:00 [INF] Executing endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 16:26:16.658 +02:00 [INF] User 587720411 update information from account 587720416...
+2025-01-29 16:26:16.772 +02:00 [INF] Executed endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 16:26:16.774 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42883: operator does not exist: character varying = integer
+
+POSITION: 79
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteScalar(Boolean async, CancellationToken cancellationToken)
+   at LogSignIn.TwoFactorAuthenticationCodeCheck.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 312
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserUniquenessHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 60
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__4>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 112
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42883
+    MessageText: operator does not exist: character varying = integer
+    Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+    Position: 79
+    File: parse_oper.c
+    Line: 656
+    Routine: op_error
+2025-01-29 16:26:16.783 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - 500 null text/plain; charset=utf-8 174.5339ms
+2025-01-29 16:26:57.238 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - null null
+2025-01-29 16:26:57.241 +02:00 [INF] Executing endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 16:26:57.242 +02:00 [INF] User 587720411 update information from account 587720416...
+2025-01-29 16:26:57.246 +02:00 [INF] Executed endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 16:26:57.246 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42883: operator does not exist: character varying = integer
+
+POSITION: 79
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteScalar(Boolean async, CancellationToken cancellationToken)
+   at LogSignIn.TwoFactorAuthenticationCodeCheck.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 312
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserUniquenessHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 60
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__4>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 112
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42883
+    MessageText: operator does not exist: character varying = integer
+    Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+    Position: 79
+    File: parse_oper.c
+    Line: 656
+    Routine: op_error
+2025-01-29 16:26:57.249 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - 500 null text/plain; charset=utf-8 11.5901ms
+2025-01-29 16:40:21.197 +02:00 [INF] Application is shutting down...
+2025-01-29 16:40:33.481 +02:00 [INF] Application started successfully.
+2025-01-29 16:40:33.545 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 16:40:33.546 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 16:40:33.546 +02:00 [INF] Hosting environment: Development
+2025-01-29 16:40:33.546 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 16:40:39.752 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - null null
+2025-01-29 16:40:39.802 +02:00 [INF] Executing endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 16:40:39.802 +02:00 [INF] User 587720411 update information from account 587720416...
+2025-01-29 16:40:39.920 +02:00 [INF] Executed endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 16:40:39.921 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42883: operator does not exist: character varying = integer
+
+POSITION: 79
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteScalar(Boolean async, CancellationToken cancellationToken)
+   at LogSignIn.TwoFactorAuthenticationCodeCheck.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 312
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserUniquenessHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 60
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__4>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 112
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42883
+    MessageText: operator does not exist: character varying = integer
+    Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+    Position: 79
+    File: parse_oper.c
+    Line: 656
+    Routine: op_error
+2025-01-29 16:40:39.931 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - 500 null text/plain; charset=utf-8 180.0933ms
+2025-01-29 16:41:10.996 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - null null
+2025-01-29 16:41:10.999 +02:00 [INF] Executing endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 16:41:10.999 +02:00 [INF] User 587720411 update information from account 587720416...
+2025-01-29 16:41:11.003 +02:00 [INF] Executed endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 16:41:11.003 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42883: operator does not exist: character varying = integer
+
+POSITION: 79
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteScalar(Boolean async, CancellationToken cancellationToken)
+   at LogSignIn.TwoFactorAuthenticationCodeCheck.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 312
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserUniquenessHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 60
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__4>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 112
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42883
+    MessageText: operator does not exist: character varying = integer
+    Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+    Position: 79
+    File: parse_oper.c
+    Line: 656
+    Routine: op_error
+2025-01-29 16:41:11.008 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - 500 null text/plain; charset=utf-8 12.5181ms
+2025-01-29 16:41:36.558 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - null null
+2025-01-29 16:41:36.559 +02:00 [INF] Executing endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 16:41:36.560 +02:00 [INF] User 587720411 update information from account 587720416...
+2025-01-29 16:41:36.561 +02:00 [INF] Executed endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 16:41:36.562 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42883: operator does not exist: character varying = integer
+
+POSITION: 79
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteScalar(Boolean async, CancellationToken cancellationToken)
+   at LogSignIn.TwoFactorAuthenticationCodeCheck.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 312
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserUniquenessHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 60
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__4>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 112
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42883
+    MessageText: operator does not exist: character varying = integer
+    Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+    Position: 79
+    File: parse_oper.c
+    Line: 656
+    Routine: op_error
+2025-01-29 16:41:36.566 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - 500 null text/plain; charset=utf-8 8.0431ms
+2025-01-29 16:42:20.618 +02:00 [INF] Application started successfully.
+2025-01-29 16:42:20.690 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 16:42:20.691 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 16:42:20.691 +02:00 [INF] Hosting environment: Development
+2025-01-29 16:42:20.691 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 16:42:24.701 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - null null
+2025-01-29 16:42:24.763 +02:00 [INF] Executing endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 16:42:24.764 +02:00 [INF] User 587720411 update information from account 587720416...
+2025-01-29 16:42:24.886 +02:00 [INF] Executed endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 16:42:24.887 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42883: operator does not exist: character varying = integer
+
+POSITION: 79
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteScalar(Boolean async, CancellationToken cancellationToken)
+   at LogSignIn.TwoFactorAuthenticationCodeCheck.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 312
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserUniquenessHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 60
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__4>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 112
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42883
+    MessageText: operator does not exist: character varying = integer
+    Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+    Position: 79
+    File: parse_oper.c
+    Line: 656
+    Routine: op_error
+2025-01-29 16:42:24.897 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - 500 null text/plain; charset=utf-8 196.7431ms
+2025-01-29 17:03:25.400 +02:00 [INF] Application is shutting down...
+2025-01-29 17:03:32.646 +02:00 [INF] Application started successfully.
+2025-01-29 17:03:32.704 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 17:03:32.705 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 17:03:32.705 +02:00 [INF] Hosting environment: Development
+2025-01-29 17:03:32.705 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 17:03:36.732 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - null null
+2025-01-29 17:03:36.783 +02:00 [INF] Executing endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 17:03:36.784 +02:00 [INF] User 587720411 update information from account 587720416...
+2025-01-29 17:03:36.907 +02:00 [INF] Executed endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 17:03:36.909 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42883: operator does not exist: character varying = integer
+
+POSITION: 79
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteScalar(Boolean async, CancellationToken cancellationToken)
+   at LogSignIn.TwoFactorAuthenticationCodeCheck.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 312
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserUniquenessHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 60
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__4>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 112
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42883
+    MessageText: operator does not exist: character varying = integer
+    Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+    Position: 79
+    File: parse_oper.c
+    Line: 656
+    Routine: op_error
+2025-01-29 17:03:36.918 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - 500 null text/plain; charset=utf-8 186.8088ms
+2025-01-29 17:04:41.146 +02:00 [INF] Application is shutting down...
+2025-01-29 17:04:50.899 +02:00 [INF] Application started successfully.
+2025-01-29 17:04:50.969 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 17:04:50.969 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 17:04:50.969 +02:00 [INF] Hosting environment: Development
+2025-01-29 17:04:50.970 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 17:04:52.255 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - null null
+2025-01-29 17:04:52.304 +02:00 [INF] Executing endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 17:04:52.305 +02:00 [INF] User 587720411 update information from account 587720416...
+2025-01-29 17:04:52.434 +02:00 [INF] Executed endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 17:04:52.436 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 23503: update or delete on table "users" violates foreign key constraint "twofactorauthenticationcodes_userid_fkey" on table "twofactorauthenticationcodes"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at LogSignIn.UpdateAccountInformation.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 343
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.TwoFactorAuthenticationCodeCheck.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 318
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserUniquenessHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 60
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__4>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 112
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: update or delete on table "users" violates foreign key constraint "twofactorauthenticationcodes_userid_fkey" on table "twofactorauthenticationcodes"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: twofactorauthenticationcodes
+    ConstraintName: twofactorauthenticationcodes_userid_fkey
+    File: ri_triggers.c
+    Line: 2633
+    Routine: ri_ReportViolation
+2025-01-29 17:04:52.445 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/965200/  - 500 null text/plain; charset=utf-8 190.9352ms
+2025-01-29 17:11:45.892 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - null null
+2025-01-29 17:11:45.897 +02:00 [INF] Executing endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 17:11:45.897 +02:00 [INF] User 587720411 try recovery account 587720416...
+2025-01-29 17:11:46.520 +02:00 [INF] Executed endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 17:11:46.521 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42804: column "codes" is of type integer but expression is of type text
+
+POSITION: 82
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at LogSignIn.TwoFactorAuthenticationCodeSend.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 285
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.PhoneExistenceHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 240
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.PhoneNumberValidationHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 96
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserExistenceHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 176
+   at LogSignIn.Handler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 27
+   at LogSignIn.UserUniquenessHandler.HandleAsync(Object request) in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Log&SignIn.cs:line 60
+   at Program.<>c__DisplayClass0_0.<<<Main>$>b__3>d.MoveNext() in /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/Program.cs:line 100
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTaskOfObject>g__ExecuteAwaited|130_0(Task`1 task, HttpContext httpContext, JsonTypeInfo`1 jsonTypeInfo)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42804
+    MessageText: column "codes" is of type integer but expression is of type text
+    Hint: You will need to rewrite or cast the expression.
+    Position: 82
+    File: parse_target.c
+    Line: 594
+    Routine: transformAssignedExpr
+2025-01-29 17:11:46.525 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - 500 null text/plain; charset=utf-8 633.8122ms
+2025-01-29 17:12:25.690 +02:00 [INF] Application is shutting down...
+2025-01-29 17:12:32.396 +02:00 [INF] Application started successfully.
+2025-01-29 17:12:32.454 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 17:12:32.455 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 17:12:32.455 +02:00 [INF] Hosting environment: Development
+2025-01-29 17:12:32.455 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 17:12:33.720 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - null null
+2025-01-29 17:12:33.767 +02:00 [INF] Executing endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 17:12:33.768 +02:00 [INF] User 587720411 try recovery account 587720416...
+2025-01-29 17:12:34.554 +02:00 [INF] Setting HTTP status code 200.
+2025-01-29 17:12:34.555 +02:00 [INF] Writing value of type 'Int32' as Json.
+2025-01-29 17:12:34.560 +02:00 [INF] Executed endpoint 'HTTP: GET /user/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}'
+2025-01-29 17:12:34.561 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/accountrecovery/587720411/587720416/+380955040831/  - 200 null application/json; charset=utf-8 841.872ms
+2025-01-29 17:12:52.895 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/464966/  - null null
+2025-01-29 17:12:52.898 +02:00 [INF] Executing endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 17:12:52.899 +02:00 [INF] User 587720411 update information from account 587720416...
+2025-01-29 17:12:52.908 +02:00 [INF] Setting HTTP status code 200.
+2025-01-29 17:12:52.908 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 17:12:52.911 +02:00 [INF] Executed endpoint 'HTTP: GET /user/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}'
+2025-01-29 17:12:52.911 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/user/updateinformation_account/587720411/587720416/464966/  - 200 null application/json; charset=utf-8 16.7403ms
+2025-01-29 19:11:35.226 +02:00 [INF] Application is shutting down...
+2025-01-29 19:11:48.345 +02:00 [INF] Application started successfully.
+2025-01-29 19:11:48.410 +02:00 [INF] Now listening on: http://localhost:5268
+2025-01-29 19:11:48.410 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-29 19:11:48.411 +02:00 [INF] Hosting environment: Development
+2025-01-29 19:11:48.411 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-01-29 19:12:30.557 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/operationwithballance/showinformation/587720411 - null null
+2025-01-29 19:12:30.608 +02:00 [INF] Executing endpoint 'HTTP: GET /operationwithballance/showinformation/{userID}'
+2025-01-29 19:12:30.609 +02:00 [INF] User 587720411 send request to show ballance...
+2025-01-29 19:12:30.724 +02:00 [INF] Setting HTTP status code 200.
+2025-01-29 19:12:30.724 +02:00 [INF] Writing value of type 'String' as Json.
+2025-01-29 19:12:30.731 +02:00 [INF] Executed endpoint 'HTTP: GET /operationwithballance/showinformation/{userID}'
+2025-01-29 19:12:30.732 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/operationwithballance/showinformation/587720411 - 200 null application/json; charset=utf-8 175.157ms

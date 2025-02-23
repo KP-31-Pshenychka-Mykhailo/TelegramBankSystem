@@ -1,0 +1,13 @@
+2025-02-01 00:24:34.289 +02:00 [INF] Application is shutting down...
+2025-02-01 00:39:25.114 +02:00 [INF] Application started successfully.
+2025-02-01 00:39:25.185 +02:00 [INF] Now listening on: http://localhost:5268
+2025-02-01 00:39:25.185 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-01 00:39:25.186 +02:00 [INF] Hosting environment: Development
+2025-02-01 00:39:25.186 +02:00 [INF] Content root path: /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp
+2025-02-01 00:39:30.316 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/operationwithballance/showinformation/587720411 - null null
+2025-02-01 00:39:30.371 +02:00 [INF] Executing endpoint 'HTTP: GET /operationwithballance/showinformation/{userID}'
+2025-02-01 00:39:30.372 +02:00 [INF] User 587720411 send request to show ballance...
+2025-02-01 00:39:30.481 +02:00 [INF] Setting HTTP status code 200.
+2025-02-01 00:39:30.482 +02:00 [INF] Writing value of type 'String' as Json.
+2025-02-01 00:39:30.488 +02:00 [INF] Executed endpoint 'HTTP: GET /operationwithballance/showinformation/{userID}'
+2025-02-01 00:39:30.489 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/operationwithballance/showinformation/587720411 - 200 null application/json; charset=utf-8 174.258ms
