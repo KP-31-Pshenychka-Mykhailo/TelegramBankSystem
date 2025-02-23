@@ -2,14 +2,19 @@ const API_URL = "http://localhost:5268";
 const userId = localStorage.getItem("userId");
 
 function toggleTile(tileId) {
+    const selectedTile = document.getElementById(tileId);
+    const isSelected = selectedTile.classList.contains('active');
+    
+    // Закрываем все плитки
     const tiles = document.querySelectorAll('.tile');
     tiles.forEach(tile => {
-        if (tile.id === tileId) {
-            tile.classList.toggle('active');
-        } else {
-            tile.classList.remove('active');
-        }
+        tile.classList.remove('active');
     });
+
+    // Открываем выбранную плитку, только если она была закрыта
+    if (!isSelected) {
+        selectedTile.classList.add('active');
+    }
 }
 
 async function handleReplenish(event) {
