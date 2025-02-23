@@ -1,6 +1,3 @@
-
-
-
 /telegram_bot
 │── /config
 │   ├── config.py
