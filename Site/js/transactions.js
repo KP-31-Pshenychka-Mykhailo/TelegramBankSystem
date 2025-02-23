@@ -1,6 +1,27 @@
 const API_URL = "http://localhost:5268";
 const userId = localStorage.getItem("userId");
 
+// Функция для обновления информации о пользователе
+async function updateUserInfo() {
+    try {
+        const response = await fetch(`${API_URL}/operationwithbalance/showInformation/${userId}`);
+        const info = await response.text();
+        
+        // Извлекаем баланс из строки ответа
+        const balanceMatch = info.match(/Funds in the account: ([\d.]+)/);
+        const balance = balanceMatch ? balanceMatch[1] : '0';
+        
+        // Обновляем информацию на странице
+        document.getElementById('user-id').textContent = userId;
+        document.getElementById('user-balance').textContent = balance;
+    } catch (error) {
+        console.error('Error fetching user info:', error);
+    }
+}
+
+// Обновляем информацию при загрузке страницы
+document.addEventListener('DOMContentLoaded', updateUserInfo);
+
 function toggleTile(tileId) {
     const selectedTile = document.getElementById(tileId);
     const isSelected = selectedTile.classList.contains('active');
@@ -38,6 +59,7 @@ async function handleReplenish(event) {
         if (response.ok) {
             form.reset();
             toggleTile('replenish-tile');
+            updateUserInfo(); // Обновляем информацию после успешной операции
         }
     } catch (error) {
         console.error('Error:', error);
@@ -68,6 +90,7 @@ async function handleTransfer(event) {
         if (response.ok) {
             form.reset();
             toggleTile('transfer-tile');
+            updateUserInfo(); // Обновляем информацию после успешной операции
         }
     } catch (error) {
         console.error('Error:', error);
@@ -96,6 +119,7 @@ async function handleWithdraw(event) {
         if (response.ok) {
             form.reset();
             toggleTile('withdraw-tile');
+            updateUserInfo(); // Обновляем информацию после успешной операции
         }
     } catch (error) {
         console.error('Error:', error);

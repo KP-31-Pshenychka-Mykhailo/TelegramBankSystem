@@ -181,3 +181,36 @@ h1 {
     width: 20px;
     height: 20px;
 }
+
+/* Стили для информации о пользователе */
+.user-info {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.info-item {
+    color: #495057;
+}
+
+.info-item span {
+    font-weight: bold;
+    color: #212529;
+}
+
+/* Стили для логотипа */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    display: block;
+}
