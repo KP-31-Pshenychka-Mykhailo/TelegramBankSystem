@@ -4,15 +4,18 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using System.Text.RegularExpressions;
 using System.Security.Cryptography.X509Certificates;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 using Npgsql;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using Twilio.Types;
+using Serilog;
 
 using LogSignIn;
 using OperationWithBallance;
-using Serilog;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +32,11 @@ var app = builder.Build();
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");//database
 
+var twilioConfig = builder.Configuration.GetSection("Twilio");
+
+string twilioAccountSid = twilioConfig["AccountSid"];
+string twilioAuthToken = twilioConfig["AuthToken"];
+string twilioPhoneNumber = twilioConfig["PhoneNumber"];
 
 var logger = app.Services.GetRequiredService<ILogger<Program>>();
 logger.LogInformation("Application started successfully.");
@@ -59,29 +67,53 @@ userRoutes.MapGet("/logIn/{userID}/{userSNP}/{userPhoneNumber}/{userPassword}", 
 
     return await userIdCheckHandler.HandleAsync((userID, userSNP, userPhoneNumber, userPassword));
 });
-userRoutes.MapGet("/signIn/{userID}/{userPassword}", async (int userID, string userPassword) =>
+userRoutes.MapGet("/signIn/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}", async (int newUserID, string oldUserID, string userPhoneNumber, string userPassword) =>
 {
-    logger.LogInformation($"User {userID} attempting sign in...");
-    var userIdCheckHandler = new UserExistenceHandler(connectionString);
-    var passwordValidationHandler = new PasswordCheckHandler(connectionString);
+    logger.LogInformation($"User {newUserID} attempting sign in...");
+    var oldUserIDCheckHandler = new UserExistenceHandler(connectionString);
+    var passwordOldUserIDChecker = new PasswordExistenceHandler(connectionString);
+    var newUserIDCheckHandler = new UserUniquenessHandler(connectionString);
+    var updateUserInformation = new UpdateAccountInformation(connectionString);
 
-    userIdCheckHandler.SetNext(passwordValidationHandler);
+    oldUserIDCheckHandler
+            .SetNext(passwordOldUserIDChecker)
+            .SetNext(newUserIDCheckHandler)
+            .SetNext(updateUserInformation);
 
-    return await userIdCheckHandler.HandleAsync((userID, userPassword));
+    return await oldUserIDCheckHandler.HandleAsync((newUserID, oldUserID, userPhoneNumber, userPassword));
 });
-userRoutes.MapGet("/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}", async (int newUserID, int oldUserID, string userPhoneNumber, string userPassword) =>
+userRoutes.MapGet("/accountrecovery/{newUserID}/{oldUserID}/{userPhoneNumber}/{userPassword}", async (int newUserID, string oldUserID, string userPhoneNumber, string userPassword) => //oldUserID to int in methods
 {
     logger.LogInformation($"User {newUserID} try recovery account {oldUserID}...");
+    var newUserIdCheckHandler = new UserUniquenessHandler(connectionString);
+    var oldUserIdCheckHandler = new UserExistenceHandler(connectionString);
+    var phoneNumberValidationHandler = new PhoneNumberValidationHandler();
+    var phoneNumberOldUserIDChecker = new PhoneExistenceHandler(connectionString);
+    var twoFactorAuthenticationHandler = new TwoFactorAuthenticationCodeSend(twilioAccountSid, twilioAuthToken, twilioPhoneNumber, connectionString);
 
-    var userIdCheckHandlerNew = new UserUniquenessHandler(connectionString);
-    var userIdCheckHandlerOld = new UserExistenceHandler(connectionString);
+    newUserIdCheckHandler
+            .SetNext(oldUserIdCheckHandler)
+            .SetNext(phoneNumberValidationHandler)
+            .SetNext(phoneNumberOldUserIDChecker)
+            .SetNext(twoFactorAuthenticationHandler);
 
+    return await newUserIdCheckHandler.HandleAsync((newUserID, oldUserID, userPhoneNumber, userPassword));
+});
+userRoutes.MapGet("/updateinformation_account/{newUserID}/{oldUserID}/{userCode}/{userPassword}", async (int newUserID, string oldUserID, string userCode, string userPassword) => //oldUserID to int in methods
+{
+    logger.LogInformation($"User {newUserID} update information from account {oldUserID}...");
+    var userIdCheckHandler = new UserUniquenessHandler(connectionString);
+    var twoFactorAuthenticationCodeCheck = new TwoFactorAuthenticationCodeCheck(connectionString);
+    var updateInformationOfAccount = new UpdateAccountInformation(connectionString);
+
+    userIdCheckHandler
+        .SetNext(twoFactorAuthenticationCodeCheck)
+        .SetNext(updateInformationOfAccount);
+    return await userIdCheckHandler.HandleAsync((newUserID, oldUserID, userCode, userPassword));
 });
 
 
-
-
-var trancsactionRoutes = app.MapGroup("/transaction");
+var trancsactionRoutes = app.MapGroup("/operationwithballance");
 trancsactionRoutes.MapGet("/transfer/{userID}/{amountOfMoney}/{recientID}", async (int userID, int amountOfMoney, int recientID) =>
 {
     logger.LogInformation($"User {userID} attempting transfer to {recientID} with amount {amountOfMoney}...");
@@ -117,6 +149,13 @@ trancsactionRoutes.MapGet("/withdrawl/{userID}/{amountOfMoney}", async (int user
         .SetNext(withdrawalHandler);
 
     return await accountExistenceHandler.HandleAsync((userID, amountOfMoney, 0));
+});
+trancsactionRoutes.MapGet("/showinformation/{userID}", async (int userID) =>
+{
+    logger.LogInformation($"User {userID} send request to show ballance...");
+    var showInformationHandler = new ShowInformationHandler(connectionString);
+
+    return await showInformationHandler.HandleAsync((userID));
 });
 
 

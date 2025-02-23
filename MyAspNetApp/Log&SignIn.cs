@@ -3,9 +3,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Npgsql;
 using System.Text.RegularExpressions; 
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 
 namespace LogSignIn 
 {
+//                             <----LogIn_Method---->                             //
 public abstract class Handler
 {
     private Handler _nextHandler;
@@ -83,10 +87,10 @@ public class PhoneNumberValidationHandler : Handler
     {
         var (userID, userSNP, userPhoneNumber, userPassword) = ((int, string, string, string))request;
 
-        userPhoneNumber = userPhoneNumber.StartsWith("+38") ? userPhoneNumber[3..] : userPhoneNumber;
+        userPhoneNumber = userPhoneNumber.StartsWith("+38") ? userPhoneNumber[3..] : userPhoneNumber;//
         if (userPhoneNumber.Length != 10 || !Regex.IsMatch(userPhoneNumber, @"^\d{10}$"))
         {
-            return Results.BadRequest("Номер телефона должен содержать ровно 10 цифр (без +38).");
+            return Results.BadRequest("Номер телефона должен содержать ровно 10 цифр.");
         }
 
         return await base.HandleAsync(request);
@@ -124,6 +128,8 @@ public class UserRegistrationHandler : Handler
         using var connection = new NpgsqlConnection(_connectionString);
         await connection.OpenAsync();
 
+        userPhoneNumber = userPhoneNumber.StartsWith("+38") ? userPhoneNumber.Substring(3) : userPhoneNumber; //<----!---->//
+
         var insertQuery = @"INSERT INTO users (userid, fullname, phonenumber, passwordhash) VALUES (@userid, @fullname, @phonenumber, @passwordhash)";
         using var insertCommand = new NpgsqlCommand(insertQuery, connection);
         insertCommand.Parameters.AddWithValue("userid", userID);
@@ -137,6 +143,8 @@ public class UserRegistrationHandler : Handler
     }
 }
 
+
+//                        <----Recovery&SignIn_Method---->                        //
 public class UserExistenceHandler : Handler
 {
     private readonly string _connectionString;
@@ -148,53 +156,236 @@ public class UserExistenceHandler : Handler
 
     public override async Task<object> HandleAsync(object request)
     {
-        var (userID, userPassword) = ((int, string))request;
+        var (newUserID, oldUserID,  userPhoneNumber, userPassword) = ((int, string, string, string))request;
 
         using var connection = new NpgsqlConnection(_connectionString);
         await connection.OpenAsync();
 
-        var checkUserQuery = "SELECT COUNT(*) FROM users WHERE userid = @userid";
-        using var checkUserCommand = new NpgsqlCommand(checkUserQuery, connection);
-        checkUserCommand.Parameters.AddWithValue("userid", userID);
+        
 
-        var userExists = (long)await checkUserCommand.ExecuteScalarAsync() > 0;
-        if (!userExists)
-        {
-            return Results.BadRequest("Пользователь с таким ID не найден.");
-        }
+        var checkOldUserQuery = "SELECT COUNT(*) FROM users WHERE userid = @userid";
+        using var checkOldUserCommand = new NpgsqlCommand(checkOldUserQuery, connection);
+        checkOldUserCommand.Parameters.AddWithValue("userid", Convert.ToInt32(oldUserID));
+
+        var oldUserExists = (long)await checkOldUserCommand.ExecuteScalarAsync() > 0;
+            if (!oldUserExists)
+            {
+                return Results.BadRequest("Старый UserID не найден.");
+            }
 
         return await base.HandleAsync(request);
     }
 }
 
-public class PasswordCheckHandler : Handler
+public class PasswordExistenceHandler : Handler
 {
     private readonly string _connectionString;
 
-    public PasswordCheckHandler(string connectionString)
+    public PasswordExistenceHandler(string connectionString)
     {
         _connectionString = connectionString;
     }
 
     public override async Task<object> HandleAsync(object request)
     {
-        var (userID, userPassword) = ((int, string))request;
+        var (newUserID, oldUserID,  userPhoneNumber, userPassword) = ((int, string, string, string))request;
 
         using var connection = new NpgsqlConnection(_connectionString);
         await connection.OpenAsync();
 
-        var getPasswordQuery = "SELECT passwordhash FROM users WHERE userid = @userid";
-        using var getPasswordCommand = new NpgsqlCommand(getPasswordQuery, connection);
-        getPasswordCommand.Parameters.AddWithValue("userid", userID);
+        var checkPasswordQuery = "SELECT passwordhash FROM users WHERE userid = @userid";
+        using var checkPasswordCommand = new NpgsqlCommand(checkPasswordQuery, connection);
+        checkPasswordCommand.Parameters.AddWithValue("userid", Convert.ToInt32(oldUserID));
 
-        var storedPassword = (string)await getPasswordCommand.ExecuteScalarAsync();
+        var storedPassword = (string)await checkPasswordCommand.ExecuteScalarAsync();
+            if (storedPassword != userPassword)
+            {
+                return Results.BadRequest("Неверный пароль для старого UserID.");
+            }
 
-        if (storedPassword != userPassword)
+        return await base.HandleAsync(request);
+    }
+}
+
+public class PhoneExistenceHandler : Handler
+{
+    private readonly string _connectionString;
+
+    public PhoneExistenceHandler(string connectionString)
+    {
+        _connectionString = connectionString;
+    }
+
+    public override async Task<object> HandleAsync(object request)
+    {
+        var (newUserID, oldUserID,  userPhoneNumber, userPassword) = ((int, string, string, string))request;
+
+        using var connection = new NpgsqlConnection(_connectionString);
+        await connection.OpenAsync();
+
+   
+
+        var checkPhoneQuery = "SELECT phonenumber FROM users WHERE userid = @userid";
+        using var checkPhoneCommand = new NpgsqlCommand(checkPhoneQuery, connection);
+        checkPhoneCommand.Parameters.AddWithValue("userid", Convert.ToInt32(oldUserID));
+
+        var storedPhoneNumber = (string)await checkPhoneCommand.ExecuteScalarAsync();
+
+       userPhoneNumber = userPhoneNumber.StartsWith("+38") ? userPhoneNumber.Substring(3) : userPhoneNumber; //<----!---->//
+
+            if (storedPhoneNumber != userPhoneNumber)
+            {
+                return Results.BadRequest("Номер телефона не совпадает.");
+            }
+
+        return await base.HandleAsync(request);
+       
+    }
+}
+
+public class TwoFactorAuthenticationCodeSend: Handler
+{
+
+        private readonly string _connectionString;
+        private readonly string _twilioAccountSid;
+        private readonly string _twilioAuthToken;
+        private readonly string _twilioPhoneNumber;
+
+        public TwoFactorAuthenticationCodeSend( string twilioAccountSid, string twilioAuthToken, string twilioPhoneNumber, string connectionString)
         {
-            return Results.BadRequest("Неверный пароль.");
+            _twilioAccountSid = twilioAccountSid;
+            _twilioAuthToken = twilioAuthToken;
+            _twilioPhoneNumber = twilioPhoneNumber;
+            _connectionString = connectionString;
         }
 
-        return Results.Ok("Аутентификация успешна!");
+    public override async Task<object> HandleAsync(object request)
+    {
+        var (newUserID, oldUserID,  userPhoneNumber, userPassword) = ((int, string, string, string))request;
+
+        var randomCode = new Random().Next(100000, 999999);
+
+        //userPhoneNumber = userPhoneNumber.StartsWith("+38") ? userPhoneNumber.Substring(3) : userPhoneNumber;//<----!---->//
+
+            TwilioClient.Init(_twilioAccountSid, _twilioAuthToken);
+            var message = await MessageResource.CreateAsync(
+                to: new PhoneNumber($"+38{userPhoneNumber}"),
+                from: new PhoneNumber(_twilioPhoneNumber),
+                body: $"Ваш код для восстановления аккаунта: {randomCode}"
+            );
+           
+        using var connection = new NpgsqlConnection(_connectionString);
+        await connection.OpenAsync();
+
+        var insertQuery = @"INSERT INTO twofactorauthenticationcodes (userid, codes, created_at) VALUES (@userid, @codes, NOW())";
+        using var insertCommand = new NpgsqlCommand(insertQuery, connection);
+        insertCommand.Parameters.AddWithValue("userid", Convert.ToInt32(oldUserID));
+        insertCommand.Parameters.AddWithValue("codes", randomCode);
+
+        await insertCommand.ExecuteNonQueryAsync();
+
+        return Results.Ok(randomCode);
+    }
+}
+
+public class TwoFactorAuthenticationCodeCheck : Handler
+{
+    private readonly string _connectionString;
+
+    public TwoFactorAuthenticationCodeCheck(string connectionString)
+    {
+        _connectionString = connectionString;
+    }
+
+    public override async Task<object> HandleAsync(object request)
+    {
+        var (newUserID, oldUserID,  userCode, _) = ((int, string, string, string))request;
+
+        using var connection = new NpgsqlConnection(_connectionString);
+        await connection.OpenAsync();
+
+        var checkCodeQuery = "SELECT COUNT(*) FROM twofactorauthenticationcodes WHERE userid = @userid AND codes = @code";
+        using var checkCodeCommand = new NpgsqlCommand(checkCodeQuery, connection);
+        checkCodeCommand.Parameters.AddWithValue("userid", Convert.ToInt32(oldUserID));
+        checkCodeCommand.Parameters.AddWithValue("code", userCode);
+
+        var isCodeValid = (long)await checkCodeCommand.ExecuteScalarAsync() > 0;
+        if (!isCodeValid)
+        {
+            return Results.BadRequest("Неверный код двухфакторной аутентификации.");
+        }
+
+        return await base.HandleAsync(request);
+    }
+}
+
+public class UpdateAccountInformation : Handler
+{
+    private readonly string _connectionString;
+
+    public UpdateAccountInformation(string connectionString)
+    {
+        _connectionString = connectionString;
+    }
+
+    public override async Task<object> HandleAsync(object request)
+    {
+        var (newUserID, oldUserID,  userPhoneNumber, userPassword) = ((int, string, string, string))request;
+
+        using var connection = new NpgsqlConnection(_connectionString);
+        await connection.OpenAsync();
+        
+        var updateQuery = @"UPDATE users SET userid = @newUserID WHERE userid = @oldUserID";
+        using var updateCommand = new NpgsqlCommand(updateQuery, connection);
+        updateCommand.Parameters.AddWithValue("newUserID", newUserID);
+        updateCommand.Parameters.AddWithValue("oldUserID", Convert.ToInt32(oldUserID));
+
+        var rowsAffected = await updateCommand.ExecuteNonQueryAsync();
+
+        if (rowsAffected > 0)
+        {
+            return Results.Ok("Информация успешно обновлена. Вход совершен");
+        }
+
+        return Results.BadRequest("Ошибка при обновлении информации.");
+    }
+}
+
+public class MessageToUser: Handler
+{
+
+        private readonly string _connectionString;
+        private readonly string _twilioAccountSid;
+        private readonly string _twilioAuthToken;
+        private readonly string _twilioPhoneNumber;
+
+        public MessageToUser( string twilioAccountSid, string twilioAuthToken, string twilioPhoneNumber, string connectionString)
+        {
+            _twilioAccountSid = twilioAccountSid;
+            _twilioAuthToken = twilioAuthToken;
+            _twilioPhoneNumber = twilioPhoneNumber;
+            _connectionString = connectionString;
+        }
+
+    public override async Task<object> HandleAsync(object request)
+    {
+        var (newUserID, oldUserID,  userPhoneNumber, userPassword) = ((int, string, string, string))request;
+
+        
+
+        //userPhoneNumber = userPhoneNumber.StartsWith("+38") ? userPhoneNumber.Substring(3) : userPhoneNumber;//<----!---->//
+
+            TwilioClient.Init(_twilioAccountSid, _twilioAuthToken);
+            var message = await MessageResource.CreateAsync(
+                to: new PhoneNumber($"+38{userPhoneNumber}"),
+                from: new PhoneNumber(_twilioPhoneNumber),
+                body: $"Ваш код для восстановления аккаунта:"
+            );
+           
+        using var connection = new NpgsqlConnection(_connectionString);
+        await connection.OpenAsync();
+
+        return Results.Ok();
     }
 }
 

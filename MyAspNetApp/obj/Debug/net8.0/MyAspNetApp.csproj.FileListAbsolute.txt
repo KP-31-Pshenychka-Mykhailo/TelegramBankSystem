@@ -61,3 +61,10 @@
 /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/bin/Debug/net8.0/Microsoft.Extensions.Diagnostics.HealthChecks.dll
 /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/bin/Debug/net8.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 /Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/bin/Debug/net8.0/HealthChecks.NpgSql.dll
+/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/work/Desktop/UhnevichCursova/ProgramCode/Server/MyAspNetApp/bin/Debug/net8.0/Twilio.dll

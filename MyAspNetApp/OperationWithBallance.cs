@@ -206,7 +206,7 @@ namespace OperationWithBallance
     {
         public static decimal CalculateFee(decimal amount)
         {
-            return amount * 0.01m; // 1% 
+            return amount * 0.01m; // 1% комиссии
         }
 
         public static async Task LogTransactionFee(NpgsqlConnection connection, int userID, decimal fee, string operationType)
@@ -220,4 +220,34 @@ namespace OperationWithBallance
             await logFeeCommand.ExecuteNonQueryAsync();
         }
     }
+
+    public class ShowInformationHandler : Handler
+    {
+        private readonly string _connectionString;
+
+        public ShowInformationHandler(string connectionString)
+        {
+            _connectionString = connectionString;
+        }
+
+        public override async Task<object> HandleAsync(object request)
+        {
+            var userID = (int)request;
+
+            using var connection = new NpgsqlConnection(_connectionString);
+            await connection.OpenAsync();
+
+            var checkBalanceQuery = "SELECT balance FROM users WHERE userid = @userid";
+            using var checkBalanceCommand = new NpgsqlCommand(checkBalanceQuery, connection);
+            checkBalanceCommand.Parameters.AddWithValue("userid", userID);
+
+            var balance = (decimal)await checkBalanceCommand.ExecuteScalarAsync();
+            
+            return Results.Ok($"Your ID : {userID} Cредств на счетуc: {balance}, ");
+            
+
+        }
+    }
+
+
 }
