@@ -1,10 +1,3 @@
-using System;
-using System.Data;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using Npgsql;
 using Telegram.Bot;
 
@@ -54,7 +47,7 @@ namespace SendMessage
 
         private async Task NotifyUser(long userId, decimal fee, string operationType)
         {
-            string message = $"Ваш баланс изменился. Операция: {operationType}, сумма: {(fee*100)-fee}";
+            string message = $"Your balance has changed. Operation: {operationType}, amount: {(fee*10)-fee}";
             long telegramChatId = await GetUserTelegramId(userId);
             if (telegramChatId != 0)
             {

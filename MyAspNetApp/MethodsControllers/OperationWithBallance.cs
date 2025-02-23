@@ -1,13 +1,15 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Diagnostics.HealthChecks;
-using Microsoft.Extensions.Hosting;
 using Npgsql;
-using System.Text.RegularExpressions;
-using System.Security.Cryptography.X509Certificates;
+
 
 namespace OperationWithBallance 
 {
+    public class UserRequestOperation
+    {
+        public long UserID { get; set; }
+        public long UserAmountOfMoney { get; set; }
+        public long UserRecipientId { get; set; }
+    }
+
     public abstract class Handler
     {
         private Handler _nextHandler;
@@ -18,7 +20,7 @@ namespace OperationWithBallance
             return nextHandler;
         }
 
-        public virtual async Task<object> HandleAsync(object request)
+        public virtual async Task<object> HandleAsync(UserRequestOperation request)
         {
             if (_nextHandler != null)
             {
@@ -38,30 +40,29 @@ namespace OperationWithBallance
             _connectionString = connectionString;
         }
 
-        public override async Task<object> HandleAsync(object request)
+        public override async Task<object> HandleAsync( UserRequestOperation request)
         {
-            var (userID, _, recientID) = ((long, long, long))request;
 
             using var connection = new NpgsqlConnection(_connectionString);
             await connection.OpenAsync();
 
             var checkAccountQuery = "SELECT COUNT(*) FROM users WHERE userid = @userid";
             using var checkAccountCommand = new NpgsqlCommand(checkAccountQuery, connection);
-            checkAccountCommand.Parameters.AddWithValue("userid", userID);
+            checkAccountCommand.Parameters.AddWithValue("userid", request.UserID);
 
             var accountExists = (long)await checkAccountCommand.ExecuteScalarAsync() > 0;
             if (!accountExists)
             {
-                return Results.BadRequest("Аккаунт отправителя не найден.");
+                return Results.BadRequest("Sender's account not found.");
             }
 
-            if (recientID != 0)
+            if (request.UserRecipientId != 0)
             {
-                checkAccountCommand.Parameters["userid"].Value = recientID;
+                checkAccountCommand.Parameters["userid"].Value = request.UserRecipientId;
                 accountExists = (long)await checkAccountCommand.ExecuteScalarAsync() > 0;
                 if (!accountExists)
                 {
-                    return Results.BadRequest("Аккаунт получателя не найден.");
+                    return Results.BadRequest("Recipient's account not found.");
                 }
             }
 
@@ -78,21 +79,20 @@ namespace OperationWithBallance
             _connectionString = connectionString;
         }
 
-        public override async Task<object> HandleAsync(object request)
+        public override async Task<object> HandleAsync(UserRequestOperation request)
         {
-            var (userID, amountOfMoney, _) = ((long, long, long))request;
 
             using var connection = new NpgsqlConnection(_connectionString);
             await connection.OpenAsync();
 
             var checkBalanceQuery = "SELECT balance FROM users WHERE userid = @userid";
             using var checkBalanceCommand = new NpgsqlCommand(checkBalanceQuery, connection);
-            checkBalanceCommand.Parameters.AddWithValue("userid", userID);
+            checkBalanceCommand.Parameters.AddWithValue("userid", request.UserID);
 
             var balance = (decimal)await checkBalanceCommand.ExecuteScalarAsync();
-            if (balance < amountOfMoney)
+            if (balance < request.UserAmountOfMoney)
             {
-                return Results.BadRequest("Недостаточно средств на счету.");
+                return Results.BadRequest("Insufficient funds in the account.");
             }
 
             return await base.HandleAsync(request);
@@ -108,12 +108,11 @@ namespace OperationWithBallance
             _connectionString = connectionString;
         }
 
-        public override async Task<object> HandleAsync(object request)
+        public override async Task<object> HandleAsync(UserRequestOperation request)
         {
-            var (userID, amountOfMoney, recientID) = ((long, long, long))request;
 
             using var connection = new NpgsqlConnection(_connectionString);
-            var fee = FeeHelper.CalculateFee(amountOfMoney);
+            var fee = FeeHelper.CalculateFee(request.UserAmountOfMoney);
 
             await connection.OpenAsync();
 
@@ -126,16 +125,16 @@ namespace OperationWithBallance
             WHERE userid IN (@userid, @recientid)";
 
             using var transferCommand = new NpgsqlCommand(transferQuery, connection);
-            transferCommand.Parameters.AddWithValue("userid", userID);
-            transferCommand.Parameters.AddWithValue("recientid", recientID);
-            transferCommand.Parameters.AddWithValue("amount", amountOfMoney);
+            transferCommand.Parameters.AddWithValue("userid", request.UserID);
+            transferCommand.Parameters.AddWithValue("recientid", request.UserRecipientId);
+            transferCommand.Parameters.AddWithValue("amount", request.UserAmountOfMoney);
             transferCommand.Parameters.AddWithValue("fee", fee);
 
             await transferCommand.ExecuteNonQueryAsync();
 
-            await FeeHelper.LogTransactionFee(connection, userID, fee, "Transfer");
+            await FeeHelper.LogTransactionFee(connection, request.UserID, fee, "Transfer");
 
-            return Results.Ok($"Перевод выполнен успешно. {fee}");
+            return Results.Ok($"Transfer completed successfully. {request.UserAmountOfMoney-fee}");
         }
     }
 
@@ -148,25 +147,24 @@ namespace OperationWithBallance
             _connectionString = connectionString;
         }
 
-        public override async Task<object> HandleAsync(object request)
+        public override async Task<object> HandleAsync(UserRequestOperation request)
         {
-            var (userID, amountOfMoney, _) = ((long, long, long))request;
 
             using var connection = new NpgsqlConnection(_connectionString);
-            var fee = FeeHelper.CalculateFee(amountOfMoney);
+            var fee = FeeHelper.CalculateFee(request.UserAmountOfMoney);
 
             await connection.OpenAsync();
 
             var replenishQuery = "UPDATE users SET balance = balance + (@amount-@fee) WHERE userid = @userid";
             using var replenishCommand = new NpgsqlCommand(replenishQuery, connection);
-            replenishCommand.Parameters.AddWithValue("userid", userID);
-            replenishCommand.Parameters.AddWithValue("amount", amountOfMoney);
+            replenishCommand.Parameters.AddWithValue("userid", request.UserID);
+            replenishCommand.Parameters.AddWithValue("amount", request.UserAmountOfMoney);
             replenishCommand.Parameters.AddWithValue("fee", fee);
 
             await replenishCommand.ExecuteNonQueryAsync();
-            await FeeHelper.LogTransactionFee(connection, userID, fee, "Replenishment");
+            await FeeHelper.LogTransactionFee(connection, request.UserID, fee, "Replenishment");
 
-            return Results.Ok($"Счет пополнен успешно.{amountOfMoney-fee}");
+            return Results.Ok($"Account replenished successfully. {request.UserAmountOfMoney-fee}");
         }
     }
 
@@ -179,26 +177,23 @@ namespace OperationWithBallance
             _connectionString = connectionString;
         }
 
-        public override async Task<object> HandleAsync(object request)
+        public override async Task<object> HandleAsync(UserRequestOperation request)
         {
-            
-
-            var (userID, amountOfMoney, _) = ((long, long, long))request;
-            var fee = FeeHelper.CalculateFee(amountOfMoney);
+            var fee = FeeHelper.CalculateFee(request.UserAmountOfMoney);
 
             using var connection = new NpgsqlConnection(_connectionString);
             await connection.OpenAsync();
 
             var withdrawQuery = "UPDATE users SET balance = balance - (@amount + @fee) WHERE userid = @userid";
             using var withdrawCommand = new NpgsqlCommand(withdrawQuery, connection);
-            withdrawCommand.Parameters.AddWithValue("userid", userID);
-            withdrawCommand.Parameters.AddWithValue("amount", amountOfMoney);
+            withdrawCommand.Parameters.AddWithValue("userid", request.UserID);
+            withdrawCommand.Parameters.AddWithValue("amount", request.UserAmountOfMoney);
             withdrawCommand.Parameters.AddWithValue("fee", fee);
 
             await withdrawCommand.ExecuteNonQueryAsync();
 
-            await FeeHelper.LogTransactionFee(connection, userID, fee, "Withdrawal");
-            return Results.Ok($"Снятие средств успешно выполнено.{amountOfMoney-fee}");
+            await FeeHelper.LogTransactionFee(connection, request.UserID, fee, "Withdrawal");
+            return Results.Ok($"Withdrawal completed successfully. {request.UserAmountOfMoney-fee}");
         }
     }
 
@@ -230,25 +225,22 @@ namespace OperationWithBallance
             _connectionString = connectionString;
         }
 
-        public override async Task<object> HandleAsync(object request)
+        public override async Task<object> HandleAsync(UserRequestOperation request)
         {
-            var userID = (long)request;
 
             using var connection = new NpgsqlConnection(_connectionString);
             await connection.OpenAsync();
 
             var checkBalanceQuery = "SELECT balance FROM users WHERE userid = @userid";
             using var checkBalanceCommand = new NpgsqlCommand(checkBalanceQuery, connection);
-            checkBalanceCommand.Parameters.AddWithValue("userid", userID);
+            checkBalanceCommand.Parameters.AddWithValue("userid", request.UserID);
 
             var balance = (decimal)await checkBalanceCommand.ExecuteScalarAsync();
             
-            return Results.Ok($"Your ID : {userID} Cредств на счетуc: {balance}, ");
+            return Results.Ok($"Your ID : {request.UserID}; Funds in the account: {balance}");
             
 
         }
     }
 
-
 }
-
