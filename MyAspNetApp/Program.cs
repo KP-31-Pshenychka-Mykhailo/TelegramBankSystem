@@ -7,6 +7,16 @@ using Dto;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 builder.Services.AddHostedService(sp => new TransactionMonitorService(
     builder.Configuration.GetConnectionString("DefaultConnectionDataBase"), 
     builder.Configuration.GetConnectionString("DefaultConnectionTelegramBot"),
@@ -20,6 +30,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseCors("AllowAll");
+app.UseRouting();
 
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 string connectionStringDataBase = builder.Configuration.GetConnectionString("DefaultConnectionDataBase");

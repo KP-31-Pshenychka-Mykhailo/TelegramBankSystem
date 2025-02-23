@@ -1,8 +1,9 @@
+
 namespace Dto
 {
         public class TransferDto
     {
-        
+
         public long UserId { get; set; }
         public long AmountOfMoney { get; set; }
         public long RecipientId { get; set; }
