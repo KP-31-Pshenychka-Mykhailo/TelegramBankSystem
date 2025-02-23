@@ -1,41 +1,99 @@
+const API_URL = "http://localhost:5268";
 const userId = localStorage.getItem("userId");
 
-async function replenish() {
-    const amount = prompt("Введите сумму для пополнения:");
-    if (!amount) return;
-
-    const response = await fetch(`${API_URL}/operationwithbalance/replenishment`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ UserId: userId, AmountOfMoney: amount })
+function toggleTile(tileId) {
+    const tiles = document.querySelectorAll('.tile');
+    tiles.forEach(tile => {
+        if (tile.id === tileId) {
+            tile.classList.toggle('active');
+        } else {
+            tile.classList.remove('active');
+        }
     });
-
-    alert(await response.text());
 }
 
-async function transfer() {
-    const recipientId = prompt("Введите ID получателя:");
-    const amount = prompt("Введите сумму перевода:");
-    if (!recipientId || !amount) return;
+async function handleReplenish(event) {
+    event.preventDefault();
+    const form = event.target;
+    const amount = parseFloat(form.amount.value);
 
-    const response = await fetch(`${API_URL}/operationwithbalance/transfer`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ UserId: userId, RecipientId: recipientId, AmountOfMoney: amount })
-    });
+    try {
+        const response = await fetch(`${API_URL}/operationwithbalance/replenishment`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ 
+                UserId: userId, 
+                AmountOfMoney: amount 
+            })
+        });
 
-    alert(await response.text());
+        const message = await response.text();
+        alert(message);
+        
+        if (response.ok) {
+            form.reset();
+            toggleTile('replenish-tile');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Произошла ошибка при выполнении операции');
+    }
 }
 
-async function withdraw() {
-    const amount = prompt("Введите сумму для снятия:");
-    if (!amount) return;
+async function handleTransfer(event) {
+    event.preventDefault();
+    const form = event.target;
+    const recipientId = form.recipientId.value;
+    const amount = parseFloat(form.amount.value);
 
-    const response = await fetch(`${API_URL}/operationwithbalance/withdrawal`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ UserId: userId, AmountOfMoney: amount })
-    });
+    try {
+        const response = await fetch(`${API_URL}/operationwithbalance/transfer`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ 
+                UserId: userId, 
+                RecipientId: recipientId, 
+                AmountOfMoney: amount 
+            })
+        });
 
-    alert(await response.text());
+        const message = await response.text();
+        alert(message);
+        
+        if (response.ok) {
+            form.reset();
+            toggleTile('transfer-tile');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Произошла ошибка при выполнении операции');
+    }
+}
+
+async function handleWithdraw(event) {
+    event.preventDefault();
+    const form = event.target;
+    const amount = parseFloat(form.amount.value);
+
+    try {
+        const response = await fetch(`${API_URL}/operationwithbalance/withdrawal`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ 
+                UserId: userId, 
+                AmountOfMoney: amount 
+            })
+        });
+
+        const message = await response.text();
+        alert(message);
+        
+        if (response.ok) {
+            form.reset();
+            toggleTile('withdraw-tile');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Произошла ошибка при выполнении операции');
+    }
 }
