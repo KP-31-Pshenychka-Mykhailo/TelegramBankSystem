@@ -201,7 +201,7 @@ namespace OperationWithBallance
     {
         public static decimal CalculateFee(decimal amount)
         {
-            return amount * 0.01m; // 1% комиссии
+            return amount * 0.01m; // 1% fee
         }
 
         public static async Task LogTransactionFee(NpgsqlConnection connection, long userID, decimal fee, string operationType)

@@ -11,9 +11,9 @@ async function login() {
     });
 
     if (response.status === 200) {
-        localStorage.setItem("userId", id); // Сохраняем ID
+        localStorage.setItem("userId", id); // Save ID
         window.location.href = "dashboard.html";
     } else {
-        alert("Ошибка входа! Проверьте данные.");
+        alert("Login error! Check your details.");
     }
 }

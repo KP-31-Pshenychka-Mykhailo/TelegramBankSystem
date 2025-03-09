@@ -3,42 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личный кабинет</title>
+    <title>Personal account</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container login dashboard">
         <div class="user-info">
             <div class="info-item">ID: <span id="user-id"></span></div>
-            <div class="info-item">Баланс: <span id="user-balance"></span> ₴</div>
+            <div class="info-item">Balance: <span id="user-balance"></span> ₴</div>
         </div>
-        <h1>Выберите операцию</h1>
+        <h1>Select operation</h1>
         <div class="tiles">
             <div class="tile" id="replenish-tile">
-                <div class="tile-header" onclick="toggleTile('replenish-tile')">Пополнение</div>
+                <div class="tile-header" onclick="toggleTile('replenish-tile')">Replenishment</div>
                 <div class="tile-content">
                     <form id="replenish-form" onsubmit="handleReplenish(event)">
                         <input type="number" name="amount" placeholder="Сумма" required min="0" step="0.01">
-                        <button type="submit">Подтвердить</button>
+                        <button type="submit">Confirm</button>
                     </form>
                 </div>
             </div>
             <div class="tile" id="transfer-tile">
-                <div class="tile-header" onclick="toggleTile('transfer-tile')">Перевод</div>
+                <div class="tile-header" onclick="toggleTile('transfer-tile')">Translation</div>
                 <div class="tile-content">
                     <form id="transfer-form" onsubmit="handleTransfer(event)">
                         <input type="text" name="recipientId" placeholder="ID получателя" required>
                         <input type="number" name="amount" placeholder="Сумма" required min="0" step="0.01">
-                        <button type="submit">Подтвердить</button>
+                        <button type="submit">Confirm</button>
                     </form>
                 </div>
             </div>
             <div class="tile" id="withdraw-tile">
-                <div class="tile-header" onclick="toggleTile('withdraw-tile')">Снятие</div>
+                <div class="tile-header" onclick="toggleTile('withdraw-tile')">Withdraw</div>
                 <div class="tile-content">
                     <form id="withdraw-form" onsubmit="handleWithdraw(event)">
                         <input type="number" name="amount" placeholder="Сумма" required min="0" step="0.01">
-                        <button type="submit">Подтвердить</button>
+                        <button type="submit">Confirm</button>
                     </form>
                 </div>
             </div>

@@ -13,13 +13,12 @@ transfer_handler.register_handlers(bot)
 withdrawal_handler.register_handlers(bot)
 info_handler.register_handlers(bot)
 
-# Обработчик неизвестных ошибок
+
 @bot.message_handler(func=lambda message: True)
 def unknown_command(message):
-    bot.send_message(message.chat.id, "Неизвестная команда. Попробуйте снова.")
+    bot.send_message(message.chat.id, "Unknown command. Try again.")
 
 
-# Запуск бота
 try:
     bot.polling(none_stop=True)
 except Exception as e:
